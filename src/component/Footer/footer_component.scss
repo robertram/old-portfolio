@@ -1,11 +1,11 @@
-@import "styles/main_styles.scss";
+@import "src/styles/main_styles.scss";
 .footer-landing {
   background-color: $white;
   padding: 40px 25px;
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  
+
   @include md {
     padding: 80px 25px;
   }
@@ -71,7 +71,7 @@
     margin-right: 30px;
   }
 
-  &__dropdownContainer{
+  &__dropdownContainer {
     display: flex;
     flex-direction: column-reverse;
     @include sm {

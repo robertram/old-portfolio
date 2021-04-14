@@ -1,4 +1,4 @@
-@import "styles/main_styles.scss";
+@import "src/styles/main_styles.scss";
 
 .header-landing {
   display: flex;
@@ -146,7 +146,7 @@
     border-radius: 6px;
     color: $white;
     @include md {
-      padding: 40px 0; 
+      padding: 40px 0;
     }
     @include lg {
       padding: 40px 10px;

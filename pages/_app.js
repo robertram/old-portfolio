@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import '../i18n/i18n';
-import '../styles/global.scss';
+import '../src/styles/global.scss';
 import Head from 'next/head';
 import AOS from 'aos';
 
