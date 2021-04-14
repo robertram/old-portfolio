@@ -1,35 +1,47 @@
-.h4 {
-  @include generate-text-styles('h4');
+.title {
+  @include generate-text-styles("title-mobile");
+  @include md {
+    @include generate-text-styles("title");
+  }
 }
 
-.h5 {
-  @include generate-text-styles('h5');
+.subtitle {
+  @include generate-text-styles("subtitle-mobile");
+  @include md {
+    @include generate-text-styles("subtitle");
+  }
 }
 
-.h6 {
-  @include generate-text-styles('h6');
+.body-regular {
+  @include generate-text-styles("body-regular-mobile");
+  @include md {
+    @include generate-text-styles("body-regular");
+  }
 }
 
-.body1 {
-  @include generate-text-styles('body1');
+.body-bold {
+  @include generate-text-styles("body-bold");
 }
 
-.subtitle1 {
-  @include generate-text-styles('subtitle1');
+.caption-regular {
+  @include generate-text-styles("caption-regular");
 }
 
-.subtitle2 {
-  @include generate-text-styles('subtitle2');
+.caption-bold {
+  @include generate-text-styles("caption-bold");
 }
 
-.caption {
-  @include generate-text-styles('caption');
+.tiny-regular {
+  @include generate-text-styles("tiny-regular");
 }
 
-.button {
-  @include generate-text-styles('button');
+.tiny-bold {
+  @include generate-text-styles("tiny-bold");
 }
 
-.link {
-  @include generate-text-styles('link');
+.button-regular {
+  @include generate-text-styles("button-regular");
+}
+.button-small {
+  @include generate-text-styles("button-small");
 }

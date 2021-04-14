@@ -4,79 +4,91 @@ $regular-size: 16px;
 $small-size: 14px;
 $smaller-size: 12px;
 
-$primary-font: "Roboto";
+$title-fontsize: 20px;
+$subtitle-fontsize: 16px;
+$body-fontsize: 14px;
+$caption-fontsize: 12px;
+$tiny-fontsize: 11px;
+$button-fontsize: 16px;
+$button-small-fontsize: 14px;
+
+$primary-font: "Poppins";
+
 $heading-font: "Poppins";
 
 $typography-variables: (
-  "h4": (
-    "font-size": 34px,
-    "font-family": $heading-font,
-    "font-weight": normal,
-    "letter-spacing": 0.07px,
-    "line-height": 39px,
-  ),
-  "h5": (
+  "title": (
     "font-family": $primary-font,
-    "font-size": 24px,
-    "font-weight": normal,
-    "letter-spacing": 0px,
-    "line-height": 31.92px,
-  ),
-  "h6": (
-    "font-size": 20px,
-    "font-family": $primary-font,
-    "font-weight": 500,
-    "letter-spacing": 0.07px,
-    "line-height": 32px,
-  ),
-  "subtitle1": (
-    "font-family": $primary-font,
-    "font-size": 16px,
-    "font-weight": 500,
-    "letter-spacing": 0.09px,
+    "font-size": $title-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0.22px,
     "line-height": 28px,
   ),
-  "subtitle2": (
+  "title-mobile": (
     "font-family": $primary-font,
-    "font-size": 14px,
-    "font-weight": 500,
-    "letter-spacing": 0.07px,
-    "line-height": 21.98px,
+    "font-size": $title-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0.22px,
+    "line-height": 28px,
   ),
-  "body1": (
+  "subtitle": (
     "font-family": $primary-font,
-    "font-size": 16px,
-    "font-weight": normal,
-    "letter-spacing": 0.09px,
-    "line-height": 24px,
+    "font-size": $subtitle-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 22px,
   ),
-  "body2": (
+  "body-regular": (
     "font-family": $primary-font,
-    "font-size": 16px,
-    "font-weight": normal,
-    "letter-spacing": 0.1px,
+    "font-size": $body-fontsize,
+    "letter-spacing": 0px,
     "line-height": 20px,
   ),
-  "caption": (
+  "body-bold": (
     "font-family": $primary-font,
-    "font-size": 12px,
-    "font-weight": normal,
-    "letter-spacing": 0.4px,
+    "font-size": $body-fontsize,
+    "letter-spacing": 0px,
+    "font-weight": bold,
     "line-height": 20px,
   ),
-  "button": (
+  "caption-regular": (
     "font-family": $primary-font,
-    "font-size": 14px,
-    "font-weight": 500,
+    "font-size": $caption-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 16px,
+  ),
+  "caption-bold": (
+    "font-family": $primary-font,
+    "font-size": $caption-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 16px,
+  ),
+  "tiny-regular": (
+    "font-family": $primary-font,
+    "font-size": $tiny-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+  "tiny-bold": (
+    "font-family": $primary-font,
+    "font-size": $tiny-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+  "button-regular": (
+    "font-family": $primary-font,
+    "font-size": $button-fontsize,
+    "font-weight": bold,
     "letter-spacing": 0.3px,
-    "line-height": 24px,
+    "line-height": 22px,
   ),
-  "link": (
+  "button-small": (
     "font-family": $primary-font,
-    "font-size": 14px,
-    "font-weight": normal,
-    "letter-spacing": 0.1px,
-    "line-height": 20px,
-    "text-decoration": underline,
+    "font-size": $button-small-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 22px,
   ),
 );

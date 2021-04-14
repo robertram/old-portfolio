@@ -13,7 +13,11 @@ const Home: React.FunctionComponent = () => {
       <br />
       <br />
       <br />
-      {/*<Footer />*/}
+
+      <p className="title">Hola</p>
+
+      <h2 className="link">Hola</h2>
+      <Footer />
     </div>
   );
 };
