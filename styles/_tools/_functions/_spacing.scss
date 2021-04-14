@@ -1,0 +1,5 @@
+$spacing: 4;
+
+@function spacing($exponent: 1, $unit: px) {
+  @return $spacing * $exponent * 1#{$unit};
+}

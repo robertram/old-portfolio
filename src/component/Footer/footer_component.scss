@@ -1,0 +1,149 @@
+@import "styles/main_styles.scss";
+.footer-landing {
+  background-color: $white;
+  padding: 40px 25px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  
+  @include md {
+    padding: 80px 25px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include sm {
+      height: 300px;
+    }
+  }
+
+  &__top {
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__grid {
+    @include sm {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  &__top-left {
+    text-align: left;
+
+    @include sm {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__social-media {
+    margin-bottom: 40px;
+  }
+
+  &__social-text {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: -0.47px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: $_cod-black;
+  }
+
+  &__icons-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+  }
+
+  &__dropdownContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    @include sm {
+      margin-left: 25px;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 500px;
+    }
+  }
+
+  &__dropdown {
+    text-align: left;
+    margin: 40px 0;
+    order: 1;
+
+    @include sm {
+      text-align: right;
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    text-align: left;
+
+    @include sm {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: right;
+    }
+  }
+
+  &__copyright-text {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: -0.47px;
+    line-height: 30px;
+    margin: 0;
+    color: $_cod-black;
+
+    @include sm {
+      margin: 0;
+    }
+  }
+}
+
+.linksMenu {
+  margin: 30px 0;
+  padding-left: 0;
+
+  @include sm {
+    margin: 0;
+    padding-left: 50px;
+  }
+
+  @include md {
+    padding-left: 100px;
+  }
+
+  &__item {
+    list-style-type: none;
+    text-align: left;
+    color: $_cod-black;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $_cod-black;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.5;
+    }
+  }
+}

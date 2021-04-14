@@ -1,0 +1,42 @@
+/**
+ * Generates all the CSS properties for the respective typography type
+ * @param  {String} $text-type  A key from the $typography-variables map where the properties
+ *                              and their values are going to be obtained.
+ * @return {CssRules}           CSS properties for the given text type.
+ */
+@mixin generate-text-styles($text-type) {
+  $typography-properties: map-get($typography-variables, $text-type);
+  @each $property, $value in $typography-properties {
+    #{$property}: $value;
+  }
+}
+
+
+
+
+@mixin font-size(
+  $size,
+  $spacing,
+  $heigth,
+  $width: auto,
+) {
+  font-size: $size;
+  letter-spacing: $spacing;
+  line-height: $heigth;
+  width: $width;
+}
+
+
+@mixin font-style(
+  $color: auto,
+  $font: auto,
+  $weight: auto,
+  $transform: auto,
+  $margin: auto
+) {
+  color: $color;
+  font-family: $font;
+  font-weight: $weight;
+  text-transform: $transform;
+  margin: $margin;
+}

@@ -1,0 +1,262 @@
+@import "styles/main_styles.scss";
+
+.header-landing {
+  display: flex;
+  background-color: $_cod-black;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  right: 0;
+  left: 0;
+
+  &--mobileActive {
+    position: fixed;
+    width: 100%;
+  }
+
+  &__wrapper {
+    max-width: 1240px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0px 25px;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    margin-top: 100px;
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+
+    @include md {
+      overflow: hidden;
+      margin-top: 0;
+      height: 100%;
+      position: static;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+    }
+  }
+
+  &__lang {
+    margin-left: 30px;
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    width: 10%;
+
+    @include md {
+      padding-bottom: 0;
+      visibility: visible;
+      opacity: 1;
+      margin: 0;
+    }
+  }
+
+  &--langToggle {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--showMobileMenu {
+    background-color: $primary_color;
+    height: 100%;
+    @include md {
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    width: 95px;
+    @include md {
+      width: 82px;
+    }
+  }
+}
+
+/*Main Navigation*/
+.mainNavigation {
+  padding: 0;
+
+  @include sm {
+    display: block;
+    justify-content: flex-start;
+  }
+
+  @include md {
+    display: flex;
+    flex: 1;
+    margin: 10px 10px;
+    justify-content: center;
+  }
+
+  &__item {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: left;
+    margin: 30px 0px;
+    padding-left: 25px;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: -0.62px;
+    line-height: 48px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    cursor: pointer;
+    @include md {
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: -0.41px;
+      line-height: 24px;
+      padding-left: 0;
+      margin: 30px 15px;
+      visibility: visible;
+      opacity: 1;
+      &:active {
+        font-weight: bold;
+        border-bottom: solid $white 4px;
+      }
+      &:hover {
+        text-decoration: none;
+        border-bottom: solid $white 4px;
+      }
+    }
+  }
+
+  &--menuToggleItem {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__link {
+    text-decoration: none;
+    border-radius: 6px;
+    color: $white;
+    @include md {
+      padding: 40px 0; 
+    }
+    @include lg {
+      padding: 40px 10px;
+      margin: 5px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--activeItem {
+    border-bottom: none;
+    border-left: solid $secondary_color 8px;
+    background-color: $_mine_shaft;
+    padding-left: 18px;
+    @include md {
+      padding-left: 0px;
+      border-bottom: solid $secondary_color 4px;
+      background: none;
+      border-left: none;
+      font-weight: bold;
+      letter-spacing: 0.39px;
+      line-height: 22px;
+    }
+  }
+}
+
+.menuToggleContainer {
+  &__menuToggleContainer {
+    color: $white;
+  }
+
+  &__menuToggle {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    margin: 5px auto;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    display: block;
+    @include md {
+      display: none;
+    }
+  }
+
+  &__text {
+    color: $white;
+    display: none;
+    font-size: 12px;
+    font-weight: normal;
+    height: 29px;
+    letter-spacing: 2.9px;
+    line-height: 29px;
+    margin-top: 10px;
+    display: block;
+    width: 63px;
+    @include md {
+      display: none;
+    }
+  }
+
+  &__line {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  &__line:nth-child(1) {
+    top: 0;
+  }
+
+  &__line:nth-child(2) {
+    top: 12px;
+  }
+
+  &__line:nth-child(3) {
+    top: 12px;
+  }
+
+  &__line:nth-child(4) {
+    top: 25px;
+  }
+
+  &--menuToggleAction {
+    .menuToggleContainer__line:nth-child(1) {
+      top: 18px;
+      width: 0;
+      left: 50%;
+    }
+
+    .menuToggleContainer__line:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    .menuToggleContainer__line:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    .menuToggleContainer__line:nth-child(4) {
+      top: 18px;
+      width: 0;
+      left: 50%;
+    }
+  }
+}

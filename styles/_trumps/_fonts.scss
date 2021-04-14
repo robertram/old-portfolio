@@ -1,0 +1,35 @@
+.h4 {
+  @include generate-text-styles('h4');
+}
+
+.h5 {
+  @include generate-text-styles('h5');
+}
+
+.h6 {
+  @include generate-text-styles('h6');
+}
+
+.body1 {
+  @include generate-text-styles('body1');
+}
+
+.subtitle1 {
+  @include generate-text-styles('subtitle1');
+}
+
+.subtitle2 {
+  @include generate-text-styles('subtitle2');
+}
+
+.caption {
+  @include generate-text-styles('caption');
+}
+
+.button {
+  @include generate-text-styles('button');
+}
+
+.link {
+  @include generate-text-styles('link');
+}

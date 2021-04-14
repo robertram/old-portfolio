@@ -1,0 +1,48 @@
+$dark-mode: true;
+
+// TODO: Colors should be private, this will be fixed when we get the affiliations dark mode designs.
+// Colors
+$_endeavour: #0055b8;
+$_mariner: #1c75dd;
+$_malachite: #00c11e;
+$_persian-red: #d32f2f;
+$_gold-drop: #f57c00;
+$_pomegranate: #f44336;
+$_persimmon: #ff6559;
+$_nevada: #6d7278;
+$_blue-gray: #607d8b;
+$mine-shaft: #303030;
+$tundora: #424242;
+$_cod-gray: #171717;
+$_cod-black: #121212;
+$white: #ffffff;
+$whiteEdgar: #ededed;
+$_gray: #8C8A8A;
+$_dust-gray: #979797;
+$_very-light-grey: #cdcbcb;
+$_stiletto: #f4433680;
+$_light-coral: #fe7273;
+$_free-speech-red: #c30000;
+$_burning_orange: #FF6938;
+$_romantic_orange: #ffd8b9;
+$_romantic_orange: #ffd8b9;
+
+$black: #000000;
+$_orange: #FF4712;
+$_mine_shaft: #393838;
+$light_gray: rgb(205, 203, 203);
+$dusty_gray: rgb(151, 151, 151);
+
+// Palette
+$primary-color: $black !default;
+$secondary-color: $_orange !default;
+$secondary-color-hover: $_burning_orange !default;
+$secondary-color-active: $_romantic_orange !default;
+$success-color: $_malachite !default;
+$error-color: $_persian-red !default;
+$warning-color: $_gold-drop !default;
+$background-default-color: $mine-shaft;
+$background-main-color: $_cod-gray;
+$background-paper-color: $tundora;
+$background-disabled-color: $_dust-gray;
+
