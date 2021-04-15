@@ -1,20 +1,14 @@
-$heading1-size: 34px;
-$heading3-size: 20px;
-$regular-size: 16px;
-$small-size: 14px;
-$smaller-size: 12px;
-
-$title-fontsize: 20px;
-$subtitle-fontsize: 16px;
-$body-fontsize: 14px;
-$caption-fontsize: 12px;
-$tiny-fontsize: 11px;
-$button-fontsize: 16px;
-$button-small-fontsize: 14px;
+//Font Sizes (Desktop and Mobile)
+$title-fontsize: 46px;
+$title-mobile-fontsize: 34px;
+$subtitle-fontsize: 30px;
+$subtitle-mobile-fontsize: 22px;
+$body-fontsize: 18px;
+$body-mobile-fontsize: 16px;
+$tiny-fontsize: 16px;
+$tiny-mobile-fontsize: 14px;
 
 $primary-font: "Poppins";
-
-$heading-font: "Poppins";
 
 $typography-variables: (
   "title": (
@@ -26,7 +20,7 @@ $typography-variables: (
   ),
   "title-mobile": (
     "font-family": $primary-font,
-    "font-size": $title-fontsize,
+    "font-size": $title-mobile-fontsize,
     "font-weight": bold,
     "letter-spacing": 0.22px,
     "line-height": 28px,
@@ -38,11 +32,24 @@ $typography-variables: (
     "letter-spacing": 0px,
     "line-height": 22px,
   ),
+  "subtitle-mobile": (
+    "font-family": $primary-font,
+    "font-size": $subtitle-mobile-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 22px,
+  ),
   "body-regular": (
     "font-family": $primary-font,
     "font-size": $body-fontsize,
     "letter-spacing": 0px,
-    "line-height": 20px,
+    "line-height": 36px,
+  ),
+  "body-regular-mobile": (
+    "font-family": $primary-font,
+    "font-size": $body-mobile-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 36px,
   ),
   "body-bold": (
     "font-family": $primary-font,
@@ -51,22 +58,22 @@ $typography-variables: (
     "font-weight": bold,
     "line-height": 20px,
   ),
-  "caption-regular": (
+  "body-mobile-bold": (
     "font-family": $primary-font,
-    "font-size": $caption-fontsize,
+    "font-size": $body-mobile-fontsize,
     "letter-spacing": 0px,
-    "line-height": 16px,
-  ),
-  "caption-bold": (
-    "font-family": $primary-font,
-    "font-size": $caption-fontsize,
     "font-weight": bold,
-    "letter-spacing": 0px,
-    "line-height": 16px,
+    "line-height": 20px,
   ),
   "tiny-regular": (
     "font-family": $primary-font,
     "font-size": $tiny-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+  "tiny-mobile-regular": (
+    "font-family": $primary-font,
+    "font-size": $tiny-mobile-fontsize,
     "letter-spacing": 0px,
     "line-height": 14px,
   ),
@@ -77,18 +84,11 @@ $typography-variables: (
     "letter-spacing": 0px,
     "line-height": 14px,
   ),
-  "button-regular": (
+  "tiny-mobile-bold": (
     "font-family": $primary-font,
-    "font-size": $button-fontsize,
-    "font-weight": bold,
-    "letter-spacing": 0.3px,
-    "line-height": 22px,
-  ),
-  "button-small": (
-    "font-family": $primary-font,
-    "font-size": $button-small-fontsize,
+    "font-size": $tiny-mobile-fontsize,
     "font-weight": bold,
     "letter-spacing": 0px,
-    "line-height": 22px,
+    "line-height": 14px,
   ),
 );
