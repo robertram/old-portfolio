@@ -65,12 +65,11 @@ const Header = ({}) => {
   return (
     <div className={getHeaderClass(showMobileMenu)}>
       <div className="header-landing__wrapper grid">
-        <a title="Home" href="/">
+        <a title="Home" href="/" className="header-landing__logoLink">
           <div className="header-landing__logo">
-            <img
-              src="assets/investors/omni-logo.svg"
-              alt={t("header_logo_alt")}
-            />
+            <img src="assets/shared/logo.png" alt="Robert Ramirez Logo" />
+            &nbsp;&nbsp;
+            <span className="header-landing__logoText body-bold">RRM</span>
           </div>
         </a>
         <div className={getMenuClass(showMobileMenu)}>

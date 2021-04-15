@@ -80,10 +80,18 @@
   }
 
   &__logo {
-    width: 95px;
-    @include md {
-      width: 82px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 60px;
+      @include md {
+        width: 60px;
+      }
     }
+  }
+  &__logoLink {
+    text-decoration: none;
+    color: $primary-color;
   }
 }
 
