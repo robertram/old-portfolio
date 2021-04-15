@@ -1,10 +1,10 @@
-import Investors from '../src/investors_component';
+import Home from '../src/modules/Home/home_component';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import { NAMESPACE_KEY } from '../src/i18n/i18n';
 
 const META_IMG = '/assets/investors/invest-meta-img.jpg';
-export default function Home() {
+export default function HomePage() {
   const { t } = useTranslation(NAMESPACE_KEY);
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || '';
 
@@ -23,7 +23,7 @@ export default function Home() {
         <meta property="og:description" content={t('meta_description')}></meta>
         <meta property="og:image" content={META_IMG}></meta>
       </Head>
-      <Investors />
+      <Home />
     </div>
   );
 }

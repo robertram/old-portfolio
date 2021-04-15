@@ -11,21 +11,12 @@
   }
 }
 
-
-
-
-@mixin font-size(
-  $size,
-  $spacing,
-  $heigth,
-  $width: auto,
-) {
+@mixin font-size($size, $spacing, $heigth, $width: auto) {
   font-size: $size;
   letter-spacing: $spacing;
   line-height: $heigth;
   width: $width;
 }
-
 
 @mixin font-style(
   $color: auto,

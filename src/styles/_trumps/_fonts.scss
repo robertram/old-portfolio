@@ -1,0 +1,41 @@
+.title {
+  @include sm {
+    @include generate-text-styles("title");
+  }
+  @include generate-text-styles("title-mobile");
+}
+
+.subtitle {
+  @include sm {
+    @include generate-text-styles("subtitle");
+  }
+  @include generate-text-styles("subtitle-mobile");
+}
+
+.body-regular {
+  @include sm {
+    @include generate-text-styles("body-regular");
+  }
+  @include generate-text-styles("body-regular-mobile");
+}
+
+.body-bold {
+  @include sm {
+    @include generate-text-styles("body-mobile-bold");
+  }
+  @include generate-text-styles("body-bold");
+}
+
+.tiny-regular {
+  @include sm {
+    @include generate-text-styles("tiny-regular");
+  }
+  @include generate-text-styles("tiny-mobile-regular");
+}
+
+.tiny-bold {
+  @include sm {
+    @include generate-text-styles("tiny-mobile-bold");
+  }
+  @include generate-text-styles("tiny-bold");
+}

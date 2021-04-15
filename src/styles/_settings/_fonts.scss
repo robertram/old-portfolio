@@ -1,0 +1,94 @@
+//Font Sizes (Desktop and Mobile)
+$title-fontsize: 46px;
+$title-mobile-fontsize: 34px;
+$subtitle-fontsize: 30px;
+$subtitle-mobile-fontsize: 22px;
+$body-fontsize: 18px;
+$body-mobile-fontsize: 16px;
+$tiny-fontsize: 16px;
+$tiny-mobile-fontsize: 14px;
+
+$primary-font: "Poppins";
+
+$typography-variables: (
+  "title": (
+    "font-family": $primary-font,
+    "font-size": $title-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0.22px,
+    "line-height": 28px,
+  ),
+  "title-mobile": (
+    "font-family": $primary-font,
+    "font-size": $title-mobile-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0.22px,
+    "line-height": 28px,
+  ),
+  "subtitle": (
+    "font-family": $primary-font,
+    "font-size": $subtitle-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 22px,
+  ),
+  "subtitle-mobile": (
+    "font-family": $primary-font,
+    "font-size": $subtitle-mobile-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 22px,
+  ),
+  "body-regular": (
+    "font-family": $primary-font,
+    "font-size": $body-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 36px,
+  ),
+  "body-regular-mobile": (
+    "font-family": $primary-font,
+    "font-size": $body-mobile-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 36px,
+  ),
+  "body-bold": (
+    "font-family": $primary-font,
+    "font-size": $body-fontsize,
+    "letter-spacing": 0px,
+    "font-weight": bold,
+    "line-height": 20px,
+  ),
+  "body-mobile-bold": (
+    "font-family": $primary-font,
+    "font-size": $body-mobile-fontsize,
+    "letter-spacing": 0px,
+    "font-weight": bold,
+    "line-height": 20px,
+  ),
+  "tiny-regular": (
+    "font-family": $primary-font,
+    "font-size": $tiny-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+  "tiny-mobile-regular": (
+    "font-family": $primary-font,
+    "font-size": $tiny-mobile-fontsize,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+  "tiny-bold": (
+    "font-family": $primary-font,
+    "font-size": $tiny-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+  "tiny-mobile-bold": (
+    "font-family": $primary-font,
+    "font-size": $tiny-mobile-fontsize,
+    "font-weight": bold,
+    "letter-spacing": 0px,
+    "line-height": 14px,
+  ),
+);
