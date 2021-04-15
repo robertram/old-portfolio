@@ -2,7 +2,7 @@
 
 .header-landing {
   display: flex;
-  background-color: $_cod-black;
+  background-color: $black;
   height: 100px;
   position: fixed;
   width: 100%;
@@ -160,7 +160,7 @@
   &--activeItem {
     border-bottom: none;
     border-left: solid $secondary_color 8px;
-    background-color: $_mine_shaft;
+    background-color: red;
     padding-left: 18px;
     @include md {
       padding-left: 0px;
