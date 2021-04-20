@@ -21,7 +21,7 @@ const getNavItems = (t: TFunction): NavItem[] => [
 const getHeaderClass = (showMobileMenu: boolean) => {
   const className = "header-landing";
   const toggle = showMobileMenu ? `${className}--mobileActive` : "";
-  return ` ${className} ${toggle}`;
+  return ` ${className} ${toggle} `;
 };
 
 const getItemClass = (
@@ -41,10 +41,26 @@ const getToggleClass = (showMobileMenu: boolean) => {
   return `${className}__menuToggle ${toggle}`;
 };
 
-const getMenuClass = (showMobileMenu: boolean) => {
+const getMenuClass = (
+  showMobileMenu: boolean,
+  pathname: string,
+  route: string
+) => {
   const className = "header-landing";
   const toggle = showMobileMenu ? `${className}--showMobileMenu` : "";
-  return `${className}__menu ${toggle}`;
+  const showHeader = pathname === route ? `${className}--hideHeaderMenu` : "";
+  return `${className}__menu ${toggle} ${showHeader}`;
+};
+
+const getMenuToggleClass = (
+  showMobileMenu: boolean,
+  pathname: string,
+  route: string
+) => {
+  const className = "menuToggleContainer";
+  const showHeader =
+    pathname === route ? `${className}--hideHeaderMenuToggle` : "";
+  return `${className} ${showHeader}`;
 };
 
 const getToggleText = (showMobileMenu: boolean, t: TFunction) => {
@@ -72,7 +88,7 @@ const Header = ({}) => {
             <span className="header-landing__logoText body-bold">RRM</span>
           </div>
         </a>
-        <div className={getMenuClass(showMobileMenu)}>
+        <div className={getMenuClass(showMobileMenu, activeRoute(), "/")}>
           <ul className="mainNavigation">
             {items.map((item, index) => {
               const { label, link } = item;
@@ -94,7 +110,10 @@ const Header = ({}) => {
             })}
           </ul>
         </div>
-        <div className="menuToggleContainer" onClick={showMobileMenuAction}>
+        <div
+          className={getMenuToggleClass(showMobileMenu, activeRoute(), "/")}
+          onClick={showMobileMenuAction}
+        >
           <div className={getToggleClass(showMobileMenu)}>
             <span className="menuToggleContainer__line"></span>
             <span className="menuToggleContainer__line"></span>
