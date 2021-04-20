@@ -8,7 +8,7 @@ export interface Props {
 const Tag = ({ text }: Props) => {
   return (
     <div className="Tag">
-      <span className="Tag__text body-regular">{text}</span>
+      <span className="Tag__text tiny-regular">{text}</span>
     </div>
   );
 };

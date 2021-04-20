@@ -14,5 +14,14 @@
   "footer_investors_text": "New business",
   "footer_work_with_us_text": "Work with us",
   "footer_follow_text": "Follow us on:",
-  "footer_copyright_text": "Robert © "
+  "footer_copyright_text": "Robert © ",
+
+  "home_about_title": "Sobre Mi",
+  "home_work_title": "Mi Trabajo",
+  "home_contact_title": "Contacto",
+
+  "about_title": "Sobre Mi",
+  "about_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delenitiillum quae architecto quis quisquam. Commodi ipsum excepturi erroraperiam rerum magnam tempore facilis laborum? Adipisci eiusaspernatur dicta alias animi.",
+  
+  "about_education_title":""
 }

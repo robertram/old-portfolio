@@ -15,8 +15,11 @@
   &__tagsContainer {
     display: flex;
   }
+}
 
-  &__ulacitImage {
-    width: 500px;
+.section {
+  margin-bottom: 0px;
+  @include sm {
+    margin-bottom: 30px;
   }
 }

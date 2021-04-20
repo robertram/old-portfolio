@@ -1,0 +1,12 @@
+@import "src/styles/main_styles.scss";
+
+.CardTextImage {
+  display: flex;
+  &__imageContainer {
+    width: 300px;
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+}

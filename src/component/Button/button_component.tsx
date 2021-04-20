@@ -1,7 +1,7 @@
 import React from "react";
 import "./button_component.scss";
 
-export interface Props {
+type Props = {
   text?: string;
   url?: string;
   className: string;
@@ -9,7 +9,7 @@ export interface Props {
   isLoading?: boolean;
   size?: string;
   isDark?: boolean;
-}
+};
 
 const getParentClass = (props: Props) => {
   const { className, isLoading, isDark } = props;
@@ -37,7 +37,7 @@ const getButtonClass = (props: Props) => {
   return `${className}__button ${sizeClass} ${buttonSize}`;
 };
 
-export const Button = (props: Props) => {
+const Button = (props: Props) => {
   const { action, text, url } = props;
   const buttonEl = (
     <button onClick={action} className={getButtonClass(props)} type="button">
@@ -55,3 +55,5 @@ export const Button = (props: Props) => {
     <div className={getParentClass(props)}>{!url ? buttonEl : hrefEl}</div>
   );
 };
+
+export default Button;
