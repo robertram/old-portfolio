@@ -14,10 +14,7 @@ const Home: React.FunctionComponent = () => {
       <br />
       <br />
 
-      <p className="title">Hola</p>
-
-      <h2 className="link">Hola</h2>
-      <Footer />
+      {/* <Footer />*/}
     </div>
   );
 };
