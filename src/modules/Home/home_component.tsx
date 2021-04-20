@@ -11,13 +11,25 @@ const Home: React.FunctionComponent = () => {
       <div className="Home__body">
         <div className="grid">
           <div className="col-desk-12 col-mob-4">
-            <Card image="assets/home/HomeCard1.jpg" />
+            <Card
+              image="assets/home/HomeCard1.jpg"
+              title="Sobre Mi"
+              link="/about"
+            />
           </div>
           <div className="col-desk-6 col-mob-4">
-            <Card image="assets/home/HomeCard2.jpg" />
+            <Card
+              image="assets/home/HomeCard3.jpg"
+              title="Mi Trabajo"
+              link="/work"
+            />
           </div>
           <div className="col-desk-6 col-mob-4">
-            <Card image="assets/home/HomeCard3.jpg" />
+            <Card
+              image="assets/home/HomeCard2.jpg"
+              title="Contacto"
+              link="/contact"
+            />
           </div>
         </div>
       </div>
