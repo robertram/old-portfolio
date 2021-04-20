@@ -7,4 +7,12 @@
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+  overflow-y: auto;
+  @include md {
+    overflow-y: hidden;
+  }
+
+  &__body {
+    padding-top: 120px;
+  }
 }
