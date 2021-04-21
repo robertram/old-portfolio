@@ -1,6 +1,9 @@
 @import "src/styles/main_styles.scss";
 
 .FurtherEducation {
-  &__cardsContainer {
+  &__iframe {
+    width: 100%;
+    border: none;
+    height: 300px;
   }
 }

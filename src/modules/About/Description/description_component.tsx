@@ -16,11 +16,13 @@ const Description = () => {
           <img
             src="assets/shared/Foto.jpg"
             alt="Foto Robert Ramirez"
-            className="About__photo"
+            className="Description__photo"
           />
         </div>
         <div className="col-desk-8 col-mob-4">
-          <p className="body-regular">{t("about_description")}</p>
+          <p className="body-regular Description__description">
+            {t("about_description")}
+          </p>
         </div>
       </div>
     </div>

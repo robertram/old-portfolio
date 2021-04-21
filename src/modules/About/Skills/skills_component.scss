@@ -1,4 +1,7 @@
 @import "src/styles/main_styles.scss";
 
 .Skills {
+  &__tagsContainer {
+    display: flex;
+  }
 }

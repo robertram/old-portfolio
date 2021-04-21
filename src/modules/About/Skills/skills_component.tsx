@@ -10,7 +10,7 @@ const Skills = () => {
           <h1 className="title">Skills</h1>
         </div>
         <div className="col-desk-12 col-mob-4">
-          <div className="About__tagsContainer">
+          <div className="Skills__tagsContainer">
             <Tag text="HTML" />
             <Tag text="CSS" />
             <Tag text="JS" />

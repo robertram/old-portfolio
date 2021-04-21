@@ -1,4 +1,11 @@
 @import "src/styles/main_styles.scss";
 
 .Description {
+  &__description {
+    margin: 0;
+  }
+
+  &__photo {
+    width: 100%;
+  }
 }

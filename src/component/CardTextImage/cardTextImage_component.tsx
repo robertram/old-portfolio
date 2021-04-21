@@ -9,29 +9,40 @@ type TProps = {
   url: string;
   description: string;
   date: string;
+  children: React.ReactNode;
 };
 
-const CardTextImage = ({ image, title, url, description, date }: TProps) => {
-  const [openModal, setOpenModal] = useState(true);
+const CardTextImage = ({
+  image,
+  title,
+  url,
+  description,
+  date,
+  children,
+}: TProps) => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div>
+      <Modal
+        open={openModal}
+        setOpen={() => setOpenModal(false)}
+        children={children}
+      />
       <div
         className="CardTextImage"
         onClick={() => {
-          console.log("card");
-
-          setOpenModal(true);
+          setOpenModal(!openModal);
         }}
       >
         <div className="CardTextImage__imageContainer">
-          <img src={image} alt="Card Image" className="" />
+          <img src={image} alt="Card Image" />
         </div>
         <div className="CardTextImage__textContainer">
           <p className="subtitle CardTextImage__title">{title}</p>
           <p className="body-regular">{description}</p>
           <p className="body-regular">{date}</p>
         </div>
-        <Modal open={openModal} setOpen={(open) => setOpenModal(open)} />
       </div>
     </div>
   );

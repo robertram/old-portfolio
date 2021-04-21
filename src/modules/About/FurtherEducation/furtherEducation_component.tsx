@@ -1,6 +1,8 @@
 import CardTextImage from "@/src/component/CardTextImage/cardTextImage_component";
 import React from "react";
 import "./furtherEducation_component.scss";
+import DesignThinking from "./ModalChildrens/DesignThinking";
+import IBMExperience from "./ModalChildrens/IBMExperience";
 
 const FurtherEducationItems = [
   {
@@ -9,6 +11,13 @@ const FurtherEducationItems = [
     description: "Design Thiniking competition",
     date: "December 2019",
     url: "/",
+    children: (
+      <DesignThinking
+        title="First Place Evolution Ideas"
+        description="Design Thiniking competition"
+        date="December 2019"
+      />
+    ),
   },
   {
     image: "assets/home/HomeCard1.jpg",
@@ -16,6 +25,13 @@ const FurtherEducationItems = [
     description: "IBM Mentoring Program",
     date: "December 2019",
     url: "/",
+    children: (
+      <IBMExperience
+        title="IBM Experience"
+        description="IBM Mentoring Program"
+        date="December 2019"
+      />
+    ),
   },
 ];
 
@@ -34,6 +50,7 @@ const FurtherEducation = () => {
                   description={item.description}
                   date={item.date}
                   url={item.url}
+                  children={item.children}
                 />
               </div>
             ))}
