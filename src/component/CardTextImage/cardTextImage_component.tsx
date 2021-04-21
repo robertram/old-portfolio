@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Modal from "@/src/component/Modal/modal_component";
 import "./cardTextImage_component.scss";
 
 type TProps = {
@@ -11,34 +12,26 @@ type TProps = {
 };
 
 const CardTextImage = ({ image, title, url, description, date }: TProps) => {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
   return (
-    <div
-      className="CardTextImage"
-      onClick={() => {
-        console.log("card");
-        if (openModal) {
-          setOpenModal(!openModal);
-        }
-        setOpenModal(!openModal);
-      }}
-    >
-      <div className="CardTextImage__imageContainer">
-        <img src={image} alt="Card Image" className="" />
-      </div>
-      <div className="CardTextImage__textContainer">
-        <p className="subtitle CardTextImage__title">{title}</p>
-        <p className="body-regular">{description}</p>
-        <p className="body-regular">{date}</p>
-      </div>
+    <div>
       <div
-        onClick={() => setOpenModal(true)}
-        className={`CardTextImage__modalBackground${
-          openModal ? "Open" : "Closed"
-        }`}
-      />
-      <div className="CardTextImage__modal">
-        <h1>a</h1>
+        className="CardTextImage"
+        onClick={() => {
+          console.log("card");
+
+          setOpenModal(true);
+        }}
+      >
+        <div className="CardTextImage__imageContainer">
+          <img src={image} alt="Card Image" className="" />
+        </div>
+        <div className="CardTextImage__textContainer">
+          <p className="subtitle CardTextImage__title">{title}</p>
+          <p className="body-regular">{description}</p>
+          <p className="body-regular">{date}</p>
+        </div>
+        <Modal open={openModal} setOpen={(open) => setOpenModal(open)} />
       </div>
     </div>
   );
