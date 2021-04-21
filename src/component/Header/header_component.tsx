@@ -2,27 +2,26 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NAMESPACE_KEY } from "../../i18n/i18n.js";
 import { TFunction } from "i18next";
-import LanguageButton from "../LanguageButton/languageButton_component";
 import "./header_component.scss";
-import { Link } from "react-scroll";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 type NavItem = {
   link: string;
   label: any;
-  offset?: number;
 };
 
 const getNavItems = (t: TFunction): NavItem[] => [
-  { link: "home", label: t("header_home_text"), offset: 0 },
-  { link: "work", label: t("header_services_text"), offset: 0 },
-  { link: "about", label: t("header_about_text"), offset: 0 },
-  { link: "contact", label: t("header_contact_text"), offset: 0 },
+  { link: "/", label: t("header_home_text") },
+  { link: "work", label: t("header_services_text") },
+  { link: "about", label: t("header_about_text") },
+  { link: "contact", label: t("header_contact_text") },
 ];
 
 const getHeaderClass = (showMobileMenu: boolean) => {
   const className = "header-landing";
   const toggle = showMobileMenu ? `${className}--mobileActive` : "";
-  return `${className} ${toggle}`;
+  return ` ${className} ${toggle} `;
 };
 
 const getItemClass = (
@@ -42,16 +41,26 @@ const getToggleClass = (showMobileMenu: boolean) => {
   return `${className}__menuToggle ${toggle}`;
 };
 
-const getMenuClass = (showMobileMenu: boolean) => {
+const getMenuClass = (
+  showMobileMenu: boolean,
+  pathname: string,
+  route: string
+) => {
   const className = "header-landing";
   const toggle = showMobileMenu ? `${className}--showMobileMenu` : "";
-  return `${className}__menu ${toggle}`;
+  const showHeader = pathname === route ? `${className}--hideHeaderMenu` : "";
+  return `${className}__menu ${toggle} ${showHeader}`;
 };
 
-const getSelectClass = (showMobileMenu: boolean) => {
-  const className = "header-landing";
-  const toggle = showMobileMenu ? `${className}--langToggle` : "";
-  return `${className}__lang ${toggle}`;
+const getMenuToggleClass = (
+  showMobileMenu: boolean,
+  pathname: string,
+  route: string
+) => {
+  const className = "menuToggleContainer";
+  const showHeader =
+    pathname === route ? `${className}--hideHeaderMenuToggle` : "";
+  return `${className} ${showHeader}`;
 };
 
 const getToggleText = (showMobileMenu: boolean, t: TFunction) => {
@@ -61,58 +70,50 @@ const getToggleText = (showMobileMenu: boolean, t: TFunction) => {
 const Header = ({}) => {
   const { t } = useTranslation(NAMESPACE_KEY);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [activeItem, setActiveItem] = useState("");
   const items = getNavItems(t);
+  const router = useRouter();
 
   const showMobileMenuAction = () => {
     setShowMobileMenu(!showMobileMenu);
   };
 
-  const handleSetActive = (to) => {
-    setActiveItem(to);
-  };
-
+  const activeRoute = () => router.pathname;
   return (
     <div className={getHeaderClass(showMobileMenu)}>
-      <div className="header-landing__wrapper">
-        <a title="Home" href="/">
+      <div className="header-landing__wrapper grid">
+        <a title="Home" href="/" className="header-landing__logoLink">
           <div className="header-landing__logo">
-            <img
-              src="assets/investors/omni-logo.svg"
-              alt={t("header_logo_alt")}
-            />
+            <img src="assets/shared/logo.png" alt="Robert Ramirez Logo" />
+            &nbsp;&nbsp;
+            <span className="header-landing__logoText body-bold">RRM</span>
           </div>
         </a>
-        <div className={getMenuClass(showMobileMenu)}>
+        <div className={getMenuClass(showMobileMenu, activeRoute(), "/")}>
           <ul className="mainNavigation">
             {items.map((item, index) => {
-              const { label, link, offset } = item;
+              const { label, link } = item;
               return (
                 <li
                   key={index}
-                  className={getItemClass(activeItem, link, showMobileMenu)}
+                  className={getItemClass(activeRoute(), link, showMobileMenu)}
                 >
-                  <Link
-                    to={link}
-                    spy={true}
-                    smooth={true}
-                    onSetActive={handleSetActive}
-                    className="mainNavigation__link"
-                    title={label}
-                    onClick={() => setShowMobileMenu(false)}
-                    offset={offset}
-                  >
-                    {label}
+                  <Link href={link}>
+                    <a
+                      className="mainNavigation__link tiny-regular"
+                      title={label}
+                    >
+                      {label}
+                    </a>
                   </Link>
                 </li>
               );
             })}
           </ul>
-          <div className={getSelectClass(showMobileMenu)}>
-            <LanguageButton />
-          </div>
         </div>
-        <div className="menuToggleContainer" onClick={showMobileMenuAction}>
+        <div
+          className={getMenuToggleClass(showMobileMenu, activeRoute(), "/")}
+          onClick={showMobileMenuAction}
+        >
           <div className={getToggleClass(showMobileMenu)}>
             <span className="menuToggleContainer__line"></span>
             <span className="menuToggleContainer__line"></span>

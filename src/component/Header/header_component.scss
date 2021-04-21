@@ -2,13 +2,18 @@
 
 .header-landing {
   display: flex;
-  background-color: $black;
+  background-color: $white;
   height: 100px;
   position: fixed;
   width: 100%;
   z-index: 100;
   right: 0;
   left: 0;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  &--hideHeaderMenu {
+    display: none !important;
+  }
 
   &--mobileActive {
     position: fixed;
@@ -44,7 +49,7 @@
       flex: 1;
       align-items: center;
       justify-content: center;
-      color: $white;
+      color: $primary-color;
     }
   }
 
@@ -71,7 +76,7 @@
   }
 
   &--showMobileMenu {
-    background-color: $primary_color;
+    background-color: $white;
     height: 100%;
     @include md {
       height: 100%;
@@ -79,10 +84,18 @@
   }
 
   &__logo {
-    width: 95px;
-    @include md {
-      width: 82px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 60px;
+      @include md {
+        width: 60px;
+      }
     }
+  }
+  &__logoLink {
+    text-decoration: none;
+    color: $primary-color;
   }
 }
 
@@ -99,7 +112,7 @@
     display: flex;
     flex: 1;
     margin: 10px 10px;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   &__item {
@@ -108,31 +121,27 @@
     text-align: left;
     margin: 30px 0px;
     padding-left: 25px;
-    font-size: 21px;
-    font-weight: normal;
-    letter-spacing: -0.62px;
-    line-height: 48px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
     cursor: pointer;
+    &:active {
+      .mainNavigation__link {
+        font-weight: bold;
+      }
+    }
+    &:hover {
+      .mainNavigation__link {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
     @include md {
-      font-size: 16px;
-      font-weight: normal;
-      letter-spacing: -0.41px;
       line-height: 24px;
       padding-left: 0;
       margin: 30px 15px;
       visibility: visible;
       opacity: 1;
-      &:active {
-        font-weight: bold;
-        border-bottom: solid $white 4px;
-      }
-      &:hover {
-        text-decoration: none;
-        border-bottom: solid $white 4px;
-      }
     }
   }
 
@@ -143,8 +152,7 @@
 
   &__link {
     text-decoration: none;
-    border-radius: 6px;
-    color: $white;
+    color: $primary-color;
     @include md {
       padding: 40px 0;
     }
@@ -159,12 +167,12 @@
 
   &--activeItem {
     border-bottom: none;
-    border-left: solid $secondary_color 8px;
-    background-color: red;
-    padding-left: 18px;
+    background-color: none;
+    .mainNavigation__link {
+      color: $secondary-color;
+    }
     @include md {
       padding-left: 0px;
-      border-bottom: solid $secondary_color 4px;
       background: none;
       border-left: none;
       font-weight: bold;
@@ -175,8 +183,13 @@
 }
 
 .menuToggleContainer {
+  cursor: pointer;
+
+  &--hideHeaderMenuToggle {
+    display: none;
+  }
   &__menuToggleContainer {
-    color: $white;
+    color: $primary-color;
   }
 
   &__menuToggle {
@@ -186,7 +199,6 @@
     margin: 5px auto;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
-    cursor: pointer;
     display: block;
     @include md {
       display: none;
@@ -194,7 +206,7 @@
   }
 
   &__text {
-    color: $white;
+    color: $primary-color;
     display: none;
     font-size: 12px;
     font-weight: normal;
@@ -214,7 +226,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: $white;
+    background-color: $primary-color;
     border-radius: 9px;
     opacity: 1;
     left: 0;
