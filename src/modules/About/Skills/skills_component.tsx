@@ -2,6 +2,21 @@ import React from "react";
 import Tag from "@/src/component/Tag/tag_component";
 import "./skills_component.scss";
 
+const skills = [
+  {
+    category: "Web Development",
+    items: [{ name: "HTML" }, { name: "CSS" }, { name: "JS" }],
+  },
+  {
+    category: "BackEnd Languages",
+    items: [{ name: "C#" }, { name: "Java" }, { name: "PHP" }],
+  },
+  {
+    category: "Databases",
+    items: [{ name: "SQLServer" }, { name: "MongoDB" }, { name: "MySQL" }],
+  },
+];
+
 const Skills = () => {
   return (
     <div className="Skills section">
@@ -10,11 +25,18 @@ const Skills = () => {
           <h1 className="title">Skills</h1>
         </div>
         <div className="col-desk-12 col-mob-4">
-          <div className="Skills__tagsContainer">
-            <Tag text="HTML" />
-            <Tag text="CSS" />
-            <Tag text="JS" />
-          </div>
+          {skills.map((item, index) => (
+            <div key={index}>
+              <h2 className="subtitle">{item.category}</h2>
+              <div className="Skills__tagsContainer">
+                {item.items.map((subitems, index2) => (
+                  <div key={index2}>
+                    <Tag text={subitems.name} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

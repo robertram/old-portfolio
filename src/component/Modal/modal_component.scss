@@ -16,13 +16,11 @@
     display: none;
   }
 
-  $base-color: #c6538c;
-
   &__modalOpen {
     width: 90%;
-    height: 600px;
+    height: 550px;
     margin-left: -45%;
-    margin-top: -300px;
+    margin-top: -275px;
     top: 50%;
     left: 50%;
     padding: 20px;
@@ -41,6 +39,9 @@
       top: 50%;
       left: 50%;
       padding: 20px;
+    }
+    body {
+      overflow: hidden;
     }
   }
   &__modalClosed {
