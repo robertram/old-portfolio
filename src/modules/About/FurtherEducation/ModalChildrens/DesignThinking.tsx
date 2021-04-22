@@ -1,47 +1,41 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { NAMESPACE_KEY } from "@/src/i18n/i18n.js";
+import ImageSlider from "@/src/component/ImageSlider/imageSlider_component";
+
+const sliderImagesItems = [
+  { image: "assets/about/designThinking/FeedScreen.png" },
+  { image: "assets/about/designThinking/ItemScannedScreen.png" },
+  { image: "assets/about/designThinking/MapScreen.png" },
+  { image: "assets/about/designThinking/ProfileScreen.png" },
+];
 
 const DesignThinking = ({ title, description, date }) => {
+  const { t } = useTranslation(NAMESPACE_KEY);
   return (
     <div className="">
-      <h1 className="subtitle">{title}</h1>
-      <p className="body-regular">{description}</p>
-      <p className="body-regular">{date}</p>
+      <div className="DesignThinking__titleContainer">
+        <p className="body-regular">{description}</p>
+        <p className="body-bold">{date}</p>
+      </div>
       <video controls className="FurtherEducation__iframe">
         <source
           src="https://portfolio-robertram.s3.amazonaws.com/FurtherTraining/WhatsApp+Video+2019-12-08+at+5.24.51+PM.mp4"
           type="video/mp4"
         />
       </video>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum nam
-        delectus omnis dolorum laborum! Eos necessitatibus porro saepe ullam,
-        quos, odio explicabo quam quod suscipit nesciunt odit aut omnis!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum nam
-        delectus omnis dolorum laborum! Eos necessitatibus porro saepe ullam,
-        quos, odio explicabo quam quod suscipit nesciunt odit aut omnis!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum nam
-        delectus omnis dolorum laborum! Eos necessitatibus porro saepe ullam,
-        quos, odio explicabo quam quod suscipit nesciunt odit aut omnis!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum nam
-        delectus omnis dolorum laborum! Eos necessitatibus porro saepe ullam,
-        quos, odio explicabo quam quod suscipit nesciunt odit aut omnis!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum nam
-        delectus omnis dolorum laborum! Eos necessitatibus porro saepe ullam,
-        quos, odio explicabo quam quod suscipit nesciunt odit aut omnis!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum nam
-        delectus omnis dolorum laborum! Eos necessitatibus porro saepe ullam,
-        quos, odio explicabo quam quod suscipit nesciunt odit aut omnis!
-      </p>
+      <div className="DesignThinking__descriptionContainer">
+        <p className="">{t("design_thinking_description")}</p>
+        {/*<img
+          src="assets/about/designThinking/FeedScreen.png"
+          alt="Design Thinking image"
+          className="DesignThinking__descriptionImage"
+        />*/}
+
+        <h2 className="subtitle">Image Slider</h2>
+
+        <ImageSlider items={sliderImagesItems} />
+      </div>
     </div>
   );
 };

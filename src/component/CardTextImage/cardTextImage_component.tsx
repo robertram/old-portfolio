@@ -25,6 +25,7 @@ const CardTextImage = ({
   return (
     <div>
       <Modal
+        title={title}
         open={openModal}
         setOpen={() => setOpenModal(false)}
         children={children}
