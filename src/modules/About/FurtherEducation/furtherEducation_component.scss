@@ -4,7 +4,7 @@
   &__iframe {
     width: 100%;
     border: none;
-    height: 300px;
+    margin: 20px 0;
   }
 }
 
@@ -14,5 +14,8 @@
   }
 
   &__descriptionImage {
+    max-width: 100px;
+    @include sm {
+    }
   }
 }

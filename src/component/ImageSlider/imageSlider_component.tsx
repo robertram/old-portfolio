@@ -29,7 +29,7 @@ const ImageSlider = ({ items }) => {
 
   return (
     <div className="ImageSlider">
-      <div className="grid">
+      <div className="grid ImageSlider__wrapper">
         <div className="ImageSlider__sliderContainer col-desk-10 col-desk-shift-0 col-mob-4">
           <div className="ImageSlider__sliderArrowsContainer ">
             <div className="ImageSlider__leftArrow col-desk-0 ">

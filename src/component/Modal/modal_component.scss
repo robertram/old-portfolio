@@ -23,7 +23,7 @@
     margin-top: -275px;
     top: 50%;
     left: 50%;
-    //padding: 20px;
+    padding: 0 20px;
 
     z-index: 9;
     background-color: $white;
@@ -44,6 +44,7 @@
       overflow: hidden;
     }
   }
+
   &__modalClosed {
     display: none;
   }
@@ -59,16 +60,11 @@
     background-color: $white;
     margin: 20px 0;
     padding: 10px 0;
-    //padding-right: 20px;
     text-align: center;
     z-index: 4;
     p {
       margin: 0;
     }
-  }
-
-  &__children {
-    //margin: 0 20px;
   }
 
   &__title {

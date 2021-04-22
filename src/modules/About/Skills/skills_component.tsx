@@ -27,7 +27,7 @@ const Skills = () => {
         <div className="col-desk-12 col-mob-4">
           {skills.map((item, index) => (
             <div key={index}>
-              <h2 className="subtitle">{item.category}</h2>
+              <h2 className="subtitle2">{item.category}</h2>
               <div className="Skills__tagsContainer">
                 {item.items.map((subitems, index2) => (
                   <div key={index2}>
