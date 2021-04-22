@@ -1,8 +1,8 @@
 import React from "react";
-
 import { useTranslation } from "react-i18next";
 import { NAMESPACE_KEY } from "@/src/i18n/i18n.js";
 import "./description_component.scss";
+import Button from "@/src/component/Button/button_component";
 
 const Description = () => {
   const { t } = useTranslation(NAMESPACE_KEY);
@@ -23,6 +23,14 @@ const Description = () => {
           <p className="body-regular Description__description">
             {t("about_description")}
           </p>
+          <div className="Description__resumeButtonContainer">
+            <Button
+              text={t("about_resume_button_text")}
+              className="Button"
+              size="medium"
+              url={t("about_resume_button_link")}
+            />
+          </div>
         </div>
       </div>
     </div>

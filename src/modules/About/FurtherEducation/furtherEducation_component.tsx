@@ -1,12 +1,14 @@
 import CardTextImage from "@/src/component/CardTextImage/cardTextImage_component";
 import React from "react";
 import "./furtherEducation_component.scss";
+import Capacitate from "./ModalChildrens/Capacitate";
 import DesignThinking from "./ModalChildrens/DesignThinking";
 import IBMExperience from "./ModalChildrens/IBMExperience";
+import Codecademy from "./ModalChildrens/Codecademy";
 
 const FurtherEducationItems = [
   {
-    image: "assets/home/HomeCard1.jpg",
+    image: "assets/about/ulacit.png",
     title: "First Place Evolution Ideas",
     description: "Design Thiniking competition",
     date: "December 2019",
@@ -20,7 +22,7 @@ const FurtherEducationItems = [
     ),
   },
   {
-    image: "assets/home/HomeCard1.jpg",
+    image: "assets/about/ibm.svg",
     title: "IBM Experience",
     description: "IBM Mentoring Program",
     date: "December 2019",
@@ -30,6 +32,48 @@ const FurtherEducationItems = [
         title="IBM Experience"
         description="IBM Mentoring Program"
         date="December 2019"
+      />
+    ),
+  },
+  {
+    image: "assets/about/capacitate.jpg",
+    title: "capacitateparaelempleo.org",
+    description: "Fundamentos de Virtualización.",
+    date: "December 2019",
+    url: "/",
+    children: (
+      <Capacitate
+        title="IBM Experience"
+        description="Fundamentos de Virtualización."
+        date="December 2019"
+      />
+    ),
+  },
+  {
+    image: "assets/about/qualys.png",
+    title: "Qualys Free Training",
+    description: "Vulnerability Management",
+    date: "July 2019",
+    url: "/",
+    children: (
+      <Capacitate
+        title="Qualys Free Training"
+        description="Vulnerability Management"
+        date="July 2019"
+      />
+    ),
+  },
+  {
+    image: "assets/about/codecademy.png",
+    title: "Codecademy",
+    description: "HTML, CSS and JavaScript Course",
+    date: "December 2017",
+    url: "/",
+    children: (
+      <Codecademy
+        title="Codecademy"
+        description="HTML, CSS and JavaScript Course"
+        date="December 2017"
       />
     ),
   },

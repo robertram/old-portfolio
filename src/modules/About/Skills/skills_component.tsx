@@ -5,7 +5,14 @@ import "./skills_component.scss";
 const skills = [
   {
     category: "Web Development",
-    items: [{ name: "HTML" }, { name: "CSS" }, { name: "JS" }],
+    items: [
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "JS" },
+      { name: "ReactJS" },
+      { name: "NextJS" },
+      { name: "NodeJS" },
+    ],
   },
   {
     category: "BackEnd Languages",
@@ -13,7 +20,12 @@ const skills = [
   },
   {
     category: "Databases",
-    items: [{ name: "SQLServer" }, { name: "MongoDB" }, { name: "MySQL" }],
+    items: [
+      { name: "SQLServer" },
+      { name: "MongoDB" },
+      { name: "MySQL" },
+      { name: "PostgreSQL" },
+    ],
   },
 ];
 
@@ -26,7 +38,7 @@ const Skills = () => {
         </div>
         <div className="col-desk-12 col-mob-4">
           {skills.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="Skills__itemContainer">
               <h2 className="subtitle2">{item.category}</h2>
               <div className="Skills__tagsContainer">
                 {item.items.map((subitems, index2) => (

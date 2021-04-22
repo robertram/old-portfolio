@@ -25,15 +25,11 @@ const DesignThinking = ({ title, description, date }) => {
         />
       </video>
       <div className="DesignThinking__descriptionContainer">
-        <p className="">{t("design_thinking_description")}</p>
-        {/*<img
-          src="assets/about/designThinking/FeedScreen.png"
-          alt="Design Thinking image"
-          className="DesignThinking__descriptionImage"
-        />*/}
+        <p className="DesignThinking__description">
+          {t("design_thinking_description")}
+        </p>
 
         <h2 className="subtitle2">{t("design_thinking_slider_title")}</h2>
-
         <ImageSlider items={sliderImagesItems} />
       </div>
     </div>

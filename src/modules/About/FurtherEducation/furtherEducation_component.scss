@@ -8,13 +8,17 @@
   }
 }
 
-.DesignThinking {
+.DesignThinking,
+.Codecademy,
+.IBMExperience,
+.Capacitate {
   &__description {
     text-align: justify;
   }
-
-  &__descriptionImage {
-    max-width: 100px;
+}
+.Codecademy {
+  &__image {
+    width: 100%;
     @include sm {
     }
   }

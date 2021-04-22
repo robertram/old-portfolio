@@ -13,8 +13,8 @@ type NavItem = {
 
 const getNavItems = (t: TFunction): NavItem[] => [
   { link: "/", label: t("header_home_text") },
-  { link: "work", label: t("header_services_text") },
   { link: "about", label: t("header_about_text") },
+  { link: "work", label: t("header_services_text") },
   { link: "contact", label: t("header_contact_text") },
 ];
 

@@ -1,11 +1,18 @@
 @import "src/styles/main_styles.scss";
 
 .CardTextImage {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
-  margin-bottom: 10px;
-  @include sm {
-    display: flex;
+  &:hover {
+    opacity: 0.6;
+  }
+  &__infoContainer {
+    display: block;
+    margin-bottom: 10px;
+    @include sm {
+      display: flex;
+    }
   }
   &__imageContainer {
     width: 100%;
@@ -14,11 +21,15 @@
       width: 200px;
     }
     img {
+      max-height: 110px;
       width: 100%;
       border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     }
   }
   &__title {
     margin-top: 0;
+  }
+  &__arrowContainer {
   }
 }

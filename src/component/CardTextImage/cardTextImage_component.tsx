@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "@/src/component/Modal/modal_component";
 import "./cardTextImage_component.scss";
+import { RightArrow } from "../ImageSlider/Arrows/rightArrow";
 
 type TProps = {
   image: string;
@@ -36,13 +37,18 @@ const CardTextImage = ({
           setOpenModal(!openModal);
         }}
       >
-        <div className="CardTextImage__imageContainer">
-          <img src={image} alt="Card Image" />
+        <div className="CardTextImage__infoContainer">
+          <div className="CardTextImage__imageContainer">
+            <img src={image} alt="Card Image" />
+          </div>
+          <div className="CardTextImage__textContainer">
+            <p className="subtitle CardTextImage__title">{title}</p>
+            <p className="body-regular">{description}</p>
+            <p className="body-regular">{date}</p>
+          </div>
         </div>
-        <div className="CardTextImage__textContainer">
-          <p className="subtitle CardTextImage__title">{title}</p>
-          <p className="body-regular">{description}</p>
-          <p className="body-regular">{date}</p>
+        <div className="CardTextImage__arrowContainer">
+          <RightArrow />
         </div>
       </div>
     </div>
