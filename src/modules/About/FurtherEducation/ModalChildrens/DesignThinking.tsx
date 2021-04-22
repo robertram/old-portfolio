@@ -32,7 +32,7 @@ const DesignThinking = ({ title, description, date }) => {
           className="DesignThinking__descriptionImage"
         />*/}
 
-        <h2 className="subtitle">Image Slider</h2>
+        <h2 className="subtitle2">{t("design_thinking_slider_title")}</h2>
 
         <ImageSlider items={sliderImagesItems} />
       </div>

@@ -34,7 +34,7 @@ const getButtonClass = (props: Props) => {
     default:
       sizeClass = "button-primary-l";
   }
-  return `${className}__button ${sizeClass} ${buttonSize}`;
+  return `${className}__button ${sizeClass} ${buttonSize} body-bold`;
 };
 
 const Button = (props: Props) => {

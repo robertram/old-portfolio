@@ -25,6 +25,10 @@
   
   "about_education_title":"",
 
+  "about_resume_button_text": "See Resume",
+  "about_resume_button_link":"https://portfolio-robertram.s3.amazonaws.com/Resume.pdf",
 
-  "design_thinking_description":"In this competition my partner and I invented a social media app where you could share your reciclying experiences with your friends. Also you could win points by scanning a product you want to recycle. The app would tell you in which trash can you would need to throw it away and also where it is located."
+
+  "design_thinking_description":"In this competition my partner and I developed the idea of a social media app where you could share your reciclying experiences with your friends. Also you could win points by scanning a product you want to recycle. The app would tell you in which trash can you would need to throw it away and also where it is located.",
+  "design_thinking_slider_title":"Project pictures"
 }
