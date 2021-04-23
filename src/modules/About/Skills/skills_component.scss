@@ -2,7 +2,9 @@
 
 .Skills {
   &__tagsContainer {
-    display: flex;
+    //display: flex;
+    @include sm {
+    }
   }
 
   &__itemContainer {

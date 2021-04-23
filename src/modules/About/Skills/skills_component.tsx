@@ -40,7 +40,7 @@ const Skills = () => {
           {skills.map((item, index) => (
             <div key={index} className="Skills__itemContainer">
               <h2 className="subtitle2">{item.category}</h2>
-              <div className="Skills__tagsContainer">
+              <div className="Skills__tagsContainer grid">
                 {item.items.map((subitems, index2) => (
                   <div key={index2}>
                     <Tag text={subitems.name} />
