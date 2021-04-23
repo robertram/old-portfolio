@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import "./modal_component.scss";
+import { CloseIcon } from "@/assets/shared/CloseIcon";
 
 type TProps = {
   title: string;
@@ -23,7 +24,7 @@ const Modal = ({ title, open, setOpen, children }: TProps) => {
         <div className="Modal__modalHeader">
           <h2 className="Modal__title subtitle">{title}</h2>
           <button onClick={setOpen} className="Modal__closeButton subtitle">
-            X
+            <CloseIcon />
           </button>
         </div>
         <div className="Modal__children">{children}</div>

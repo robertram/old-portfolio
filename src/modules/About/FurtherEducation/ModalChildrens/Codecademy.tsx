@@ -14,12 +14,12 @@ const Codecademy = ({ title, description, date }) => {
         <p className="Codecademy__description">{t("codecademy_description")}</p>
         <img
           src="assets/about/CodecademyAchievements.png"
-          alt="aa"
+          alt=""
           className="Codecademy__image"
         />
         <img
           src="assets/about/CodecademyAchievements2.png"
-          alt="ss"
+          alt=""
           className="Codecademy__image"
         />
       </div>

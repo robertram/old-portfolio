@@ -31,5 +31,9 @@
     margin-top: 0;
   }
   &__arrowContainer {
+    display: none;
+    @include md {
+      display: block;
+    }
   }
 }
