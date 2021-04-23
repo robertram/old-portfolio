@@ -42,7 +42,7 @@ const ImageSlider = ({ items }) => {
                     <img
                       src={item.image}
                       alt="Slider image"
-                      className="DesignThinking__descriptionImage"
+                      className="ImageSlider__descriptionImage"
                     />
                   </div>
                 ))}
