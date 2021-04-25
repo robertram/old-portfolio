@@ -11,7 +11,7 @@ type TCard = {
   link: string;
 };
 
-const Header = ({ image, title, link }: TCard) => {
+const Card = ({ image, title, link }: TCard) => {
   const { t } = useTranslation(NAMESPACE_KEY);
 
   return (
@@ -24,4 +24,4 @@ const Header = ({ image, title, link }: TCard) => {
   );
 };
 
-export default Header;
+export default Card;

@@ -14,9 +14,9 @@ type NavItem = {
 
 const getNavItems = (t: TFunction): NavItem[] => [
   { link: "hero", label: t("header_home_text"), offset: -100 },
-  { link: "about", label: t("header_about_text"), offset: -100 },
-  { link: "work", label: t("header_services_text"), offset: -100 },
-  { link: "contact", label: t("header_contact_text"), offset: -100 },
+  { link: "about", label: t("header_about_text"), offset: -110 },
+  { link: "work", label: t("header_services_text"), offset: -110 },
+  { link: "contact", label: t("header_contact_text"), offset: -110 },
 ];
 
 const getHeaderClass = (showMobileMenu: boolean) => {
