@@ -1,0 +1,18 @@
+@import "src/styles/main_styles.scss";
+
+.Description {
+  &__description {
+    margin: 0;
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    max-height: 350px;
+  }
+
+  &__resumeButtonContainer {
+    margin-top: 20px;
+  }
+}

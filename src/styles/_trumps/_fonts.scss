@@ -12,6 +12,13 @@
   @include generate-text-styles("subtitle-mobile");
 }
 
+.subtitle2 {
+  @include sm {
+    @include generate-text-styles("subtitle2");
+  }
+  @include generate-text-styles("subtitle2-mobile");
+}
+
 .body-regular {
   @include sm {
     @include generate-text-styles("body-regular");

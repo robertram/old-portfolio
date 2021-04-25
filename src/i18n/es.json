@@ -3,16 +3,52 @@
   "meta_description": "Portfolio Robert Ramirez",
   "header_logo_alt": "Robert Ramirez | Portolio",
 
-  "header_home_text": "Inicio",
-  "header_services_text": "Mi Trabajo",
-  "header_about_text": "Sobre Mi",
-  "header_contact_text": "Contacto",
-  "header_close_text": "CERRAR",
-  "header_menu_text": "MENÚ",
+  "header_home_text": "Home",
+  "header_services_text": "My Work",
+  "header_about_text": "About Me",
+  "header_contact_text": "Contact",
+  "header_close_text": "CLOSE",
+  "header_menu_text": "MENU",
 
   "footer_about_text": "About ",
   "footer_investors_text": "New business",
   "footer_work_with_us_text": "Work with us",
   "footer_follow_text": "Follow us on:",
-  "footer_copyright_text": "Robert © "
+  "footer_copyright_text": "Robert © ",
+
+  "home_about_title": "About Me",
+  "home_work_title": "My Work",
+  "home_contact_title": "Contact",
+
+  
+  "hero_button_text": "Read about me",
+  "hero_button_link": "#about",
+  
+
+  "about_title": "About Me",
+  "about_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delenitiillum quae architecto quis quisquam. Commodi ipsum excepturi erroraperiam rerum magnam tempore facilis laborum? Adipisci eiusaspernatur dicta alias animi.",
+  
+  "about_education_title":"",
+
+  "about_resume_button_text": "See Resume",
+  "about_resume_button_link":"https://portfolio-robertram.s3.amazonaws.com/Resume.pdf",
+
+  "ibm_description":"IBM contacted the university for some of the bests students so they can capacitate us, and I was one of the less than 15 students that were chosen by the profesors. Here we learned about Agile, Security, Dockers & Kubernetes, Cloud Computing & Linux",
+  "ibm_button_text": "See Certificate",
+  "ibm_button_link":"https://portfolio-robertram.s3.amazonaws.com/FurtherTraining/IBMExperienceCertificate.pdf",
+
+  "capacitate_description":"Part of the Virtualization course in the university was to complete a free online course given by Fundación Carlos Slim in the capacitateparaelempleo.org website",
+  "capacitate_button_text": "See Certificate",
+  "capacitate_button_link":"https://portfolio-robertram.s3.amazonaws.com/FurtherTraining/FundamentosVirtualizacio%CC%81nCertificado.pdf",
+
+  "design_thinking_description":"In this competition my partner and I developed the idea of a social media app where you could share your reciclying experiences with your friends. Also you could win points by scanning a product you want to recycle. The app would tell you in which trash can you would need to throw it away and also where it is located.",
+  "design_thinking_slider_title":"Project pictures",
+
+  "qualys_description":"",
+  "qualys_button_text": "See Certificate",
+  "qualys_button_link":"https://portfolio-robertram.s3.amazonaws.com/FurtherTraining/qualysCertificate.pdf",
+
+  "codecademy_description":"This was my first approach on learning to code by my self. "
+  
+
 }

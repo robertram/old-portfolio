@@ -1,0 +1,86 @@
+@import "src/styles/main_styles.scss";
+
+.Modal {
+  &__modalBackgroundOpen {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__modalBackgroundClosed {
+    display: none;
+  }
+
+  &__modalOpen {
+    width: 90%;
+    height: 550px;
+    margin-left: -45%;
+    margin-top: -275px;
+    top: 50%;
+    left: 50%;
+    padding: 0 20px;
+
+    z-index: 9;
+    background-color: $white;
+    opacity: 1;
+    position: fixed;
+    overflow-y: auto;
+    border-radius: 10px;
+    @include md {
+      width: 800px;
+      height: 90%;
+      margin-left: -400px;
+      margin-top: -22%;
+      top: 50%;
+      left: 50%;
+      padding: 0 40px;
+    }
+    body {
+      overflow: hidden;
+    }
+  }
+
+  &__modalClosed {
+    display: none;
+  }
+
+  &__modalHeader {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: auto;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 4;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin: auto 0;
+  }
+
+  &__closeButton {
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: $white;
+    padding: 10px;
+    &:hover {
+      .CloseIcon {
+        fill: $gray;
+      }
+    }
+  }
+}

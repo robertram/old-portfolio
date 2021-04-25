@@ -1,14 +1,12 @@
 @import "src/styles/main_styles.scss";
 
-.Home {
+.About {
   width: 100%;
   height: 100vh;
 
-  justify-content: center;
-  margin: 0 auto;
-
   &__body {
-    padding-top: 100px;
+    padding-top: 120px;
+    margin-bottom: 20px;
   }
 }
 

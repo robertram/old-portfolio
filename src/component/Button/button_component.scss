@@ -1,0 +1,105 @@
+@import "src/styles/main_styles.scss";
+
+.Button {
+  &__button {
+    cursor: pointer;
+    outline: none;
+    background-color: $black;
+    border-radius: 30px;
+    border: 0;
+    padding: 15px 24px;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      background: $white;
+      color: $black;
+      box-shadow: 0px 4px 8px 0px rgba(18, 54, 132, 0.16);
+    }
+    &:active {
+      background: $gray;
+      color: $white;
+    }
+  }
+  &__small {
+    padding: 14px 16px;
+  }
+  &__medium {
+    padding: 11px 24px;
+  }
+
+  &__disable {
+    user-select: none;
+    pointer-events: none;
+
+    button {
+      background-color: $black;
+      color: $black;
+    }
+  }
+}
+
+.SecondaryButtonLight {
+  &__button {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border-radius: 30px;
+    border: solid $black 2px;
+    padding: 15px 40px;
+    box-shadow: 0px 4px 8px 0px rgba(18, 54, 132, 0.16);
+    &:hover {
+      color: $white;
+      background: $black;
+      box-shadow: 0px 4px 8px 0px rgba(18, 54, 132, 0.16);
+    }
+    &:active {
+      background: $black;
+      color: $black;
+      border: solid $black 2px;
+    }
+  }
+
+  &__disable {
+    user-select: none;
+    pointer-events: none;
+
+    button {
+      background-color: transparent;
+      color: $black;
+      border: solid $black 2px;
+    }
+  }
+}
+
+.SecondaryButton {
+  &__button {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border-radius: 30px;
+    border: solid $white 2px;
+    padding: 15px 40px;
+    color: $white;
+    &:hover {
+      background: $white;
+      color: $black;
+      box-shadow: 0px 4px 8px 0px rgba(18, 54, 132, 0.16);
+    }
+    &:active {
+      background: $black;
+      color: $black;
+      border: solid $black 2px;
+    }
+  }
+
+  &__disable {
+    user-select: none;
+    pointer-events: none;
+
+    button {
+      background-color: transparent;
+      color: $black;
+      border: solid $black 2px;
+    }
+  }
+}

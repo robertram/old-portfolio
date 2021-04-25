@@ -2,36 +2,29 @@ import React from "react";
 import Header from "../../component/Header/header_component";
 import Footer from "../../component/Footer/footer_component";
 import Card from "../../component/Card/card_component";
+import Description from "./Description/description_component";
+import Education from "./Education/education_component";
+import FurtherEducation from "./FurtherEducation/furtherEducation_component";
+import Skills from "./Skills/skills_component";
+import Lottie from "lottie-react";
+import { useTranslation } from "react-i18next";
+import { NAMESPACE_KEY } from "../../i18n/i18n.js";
 import "./home_styles.scss";
+import animationMap from "@/assets/shared/computer.json";
+import Hero from "./Hero/hero_component";
 
 const Home: React.FunctionComponent = () => {
+  const { t } = useTranslation(NAMESPACE_KEY);
   return (
     <div className="Home">
       <Header />
+
       <div className="Home__body">
-        <div className="grid">
-          <div className="col-desk-12 col-mob-4">
-            <Card
-              image="assets/home/HomeCard1.jpg"
-              title="Sobre Mi"
-              link="/about"
-            />
-          </div>
-          <div className="col-desk-6 col-mob-4">
-            <Card
-              image="assets/home/HomeCard3.jpg"
-              title="Mi Trabajo"
-              link="/work"
-            />
-          </div>
-          <div className="col-desk-6 col-mob-4">
-            <Card
-              image="assets/home/HomeCard2.jpg"
-              title="Contacto"
-              link="/contact"
-            />
-          </div>
-        </div>
+        <Hero />
+        <Description />
+        <Skills />
+        <Education />
+        <FurtherEducation />
       </div>
 
       {/* <Footer />*/}

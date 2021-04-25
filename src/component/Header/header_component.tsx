@@ -3,19 +3,20 @@ import { useTranslation } from "react-i18next";
 import { NAMESPACE_KEY } from "../../i18n/i18n.js";
 import { TFunction } from "i18next";
 import "./header_component.scss";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { Link } from "react-scroll";
 
 type NavItem = {
   link: string;
   label: any;
+  offset?: number;
 };
 
 const getNavItems = (t: TFunction): NavItem[] => [
-  { link: "/", label: t("header_home_text") },
-  { link: "work", label: t("header_services_text") },
-  { link: "about", label: t("header_about_text") },
-  { link: "contact", label: t("header_contact_text") },
+  { link: "hero", label: t("header_home_text"), offset: -100 },
+  { link: "about", label: t("header_about_text"), offset: -100 },
+  { link: "work", label: t("header_services_text"), offset: -100 },
+  { link: "contact", label: t("header_contact_text"), offset: -100 },
 ];
 
 const getHeaderClass = (showMobileMenu: boolean) => {
@@ -48,19 +49,12 @@ const getMenuClass = (
 ) => {
   const className = "header-landing";
   const toggle = showMobileMenu ? `${className}--showMobileMenu` : "";
-  const showHeader = pathname === route ? `${className}--hideHeaderMenu` : "";
-  return `${className}__menu ${toggle} ${showHeader}`;
+  return `${className}__menu ${toggle} `;
 };
 
-const getMenuToggleClass = (
-  showMobileMenu: boolean,
-  pathname: string,
-  route: string
-) => {
+const getMenuToggleClass = (showMobileMenu: boolean) => {
   const className = "menuToggleContainer";
-  const showHeader =
-    pathname === route ? `${className}--hideHeaderMenuToggle` : "";
-  return `${className} ${showHeader}`;
+  return `${className} `;
 };
 
 const getToggleText = (showMobileMenu: boolean, t: TFunction) => {
@@ -70,6 +64,7 @@ const getToggleText = (showMobileMenu: boolean, t: TFunction) => {
 const Header = ({}) => {
   const { t } = useTranslation(NAMESPACE_KEY);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [activeItem, setActiveItem] = useState("");
   const items = getNavItems(t);
   const router = useRouter();
 
@@ -77,7 +72,10 @@ const Header = ({}) => {
     setShowMobileMenu(!showMobileMenu);
   };
 
-  const activeRoute = () => router.pathname;
+  const handleSetActive = (to) => {
+    setActiveItem(to);
+  };
+
   return (
     <div className={getHeaderClass(showMobileMenu)}>
       <div className="header-landing__wrapper grid">
@@ -88,22 +86,26 @@ const Header = ({}) => {
             <span className="header-landing__logoText body-bold">RRM</span>
           </div>
         </a>
-        <div className={getMenuClass(showMobileMenu, activeRoute(), "/")}>
+        <div className={getMenuClass(showMobileMenu, activeItem, "/")}>
           <ul className="mainNavigation">
             {items.map((item, index) => {
-              const { label, link } = item;
+              const { label, link, offset } = item;
               return (
                 <li
                   key={index}
-                  className={getItemClass(activeRoute(), link, showMobileMenu)}
+                  className={getItemClass(activeItem, link, showMobileMenu)}
                 >
-                  <Link href={link}>
-                    <a
-                      className="mainNavigation__link tiny-regular"
-                      title={label}
-                    >
-                      {label}
-                    </a>
+                  <Link
+                    to={link}
+                    spy={true}
+                    smooth={true}
+                    onSetActive={handleSetActive}
+                    className="mainNavigation__link tiny-regular"
+                    title={label}
+                    onClick={() => setShowMobileMenu(false)}
+                    offset={offset}
+                  >
+                    {label}
                   </Link>
                 </li>
               );
@@ -111,7 +113,7 @@ const Header = ({}) => {
           </ul>
         </div>
         <div
-          className={getMenuToggleClass(showMobileMenu, activeRoute(), "/")}
+          className={getMenuToggleClass(showMobileMenu)}
           onClick={showMobileMenuAction}
         >
           <div className={getToggleClass(showMobileMenu)}>

@@ -1,0 +1,39 @@
+@import "src/styles/main_styles.scss";
+
+.CardTextImage {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+  &__infoContainer {
+    display: block;
+    margin-bottom: 10px;
+    @include sm {
+      display: flex;
+    }
+  }
+  &__imageContainer {
+    width: 100%;
+    margin-right: 20px;
+    @include sm {
+      width: 200px;
+    }
+    img {
+      max-height: 110px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    }
+  }
+  &__title {
+    margin-top: 0;
+  }
+  &__arrowContainer {
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
+}

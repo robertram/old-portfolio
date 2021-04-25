@@ -1,0 +1,13 @@
+@import "src/styles/main_styles.scss";
+
+.Skills {
+  &__tagsContainer {
+    //display: flex;
+    @include sm {
+    }
+  }
+
+  &__itemContainer {
+    margin-bottom: 20px;
+  }
+}

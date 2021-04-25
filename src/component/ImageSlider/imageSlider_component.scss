@@ -1,0 +1,58 @@
+@import "src/styles/main_styles.scss";
+
+.ImageSlider {
+  &__sliderArrowsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sliderContainer {
+    width: 70%;
+    height: 100%;
+    padding: 0 !important;
+    @include sm {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__descriptionImage {
+    width: 100%;
+  }
+
+  &__leftArrow {
+    margin-right: 40px;
+  }
+
+  &__imageContainer {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+
+.LeftSliderArrow {
+  width: 40px;
+  height: 40px;
+  border: solid $black 2px;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.RightSliderArrow {
+  width: 40px;
+  height: 40px;
+  border: solid $black 2px;
+  border-radius: 100%;
+  padding: 5px;
+  transform: rotate(180deg);
+}
+
+.LeftSliderArrow,
+.RightSliderArrow {
+  &:hover {
+    background-color: $gray;
+    color: red;
+    fill: $white;
+    border: solid $gray 2px;
+  }
+}
