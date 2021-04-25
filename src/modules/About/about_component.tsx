@@ -10,12 +10,7 @@ const About: React.FunctionComponent = () => {
   return (
     <div className="About">
       <Header />
-      <div className="About__body">
-        <Description />
-        <Skills />
-        <Education />
-        <FurtherEducation />
-      </div>
+      <div className="About__body"></div>
     </div>
   );
 };

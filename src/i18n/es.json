@@ -20,6 +20,11 @@
   "home_work_title": "My Work",
   "home_contact_title": "Contact",
 
+  
+  "hero_button_text": "Read about me",
+  "hero_button_link": "#about",
+  
+
   "about_title": "About Me",
   "about_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delenitiillum quae architecto quis quisquam. Commodi ipsum excepturi erroraperiam rerum magnam tempore facilis laborum? Adipisci eiusaspernatur dicta alias animi.",
   

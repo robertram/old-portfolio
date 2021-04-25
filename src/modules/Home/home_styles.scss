@@ -5,14 +5,16 @@
   height: 100vh;
 
   justify-content: center;
-  text-align: center;
   margin: 0 auto;
-  overflow-y: auto;
-  @include md {
-    overflow-y: hidden;
-  }
 
   &__body {
-    padding-top: 120px;
+    padding-top: 100px;
+  }
+}
+
+.section {
+  margin-bottom: 0px;
+  @include sm {
+    margin-bottom: 30px;
   }
 }

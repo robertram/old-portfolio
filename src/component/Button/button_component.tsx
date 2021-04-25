@@ -9,6 +9,7 @@ type Props = {
   isLoading?: boolean;
   size?: string;
   isDark?: boolean;
+  notBlank?: boolean;
 };
 
 const getParentClass = (props: Props) => {
@@ -38,14 +39,14 @@ const getButtonClass = (props: Props) => {
 };
 
 const Button = (props: Props) => {
-  const { action, text, url } = props;
+  const { action, text, url, notBlank } = props;
   const buttonEl = (
     <button onClick={action} className={getButtonClass(props)} type="button">
       {text}
     </button>
   );
   const hrefEl = (
-    <a href={url} target="_blank" rel="noreferrer">
+    <a href={url} target={notBlank ? "_self" : "_blank"} rel="noreferrer">
       <button onClick={action} className={getButtonClass(props)} type="button">
         {text}
       </button>

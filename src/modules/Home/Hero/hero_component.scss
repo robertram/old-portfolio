@@ -1,0 +1,17 @@
+@import "src/styles/main_styles.scss";
+
+.Hero {
+  display: flex;
+  justify-content: space-between;
+  min-height: 90vh;
+  &__wrapper {
+    margin: auto;
+  }
+  &__animation {
+    margin: auto;
+  }
+
+  &__text {
+    margin: auto;
+  }
+}
