@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Tag from "@/src/component/Tag/tag_component";
 import "./work_component.scss";
 import BigCard from "@/src/component/BigCard/bigCard_component";
+import { WorkContext } from "../../../../contexts/WorkContext";
 
 const workItems = [
   {
@@ -42,6 +43,11 @@ const workItems = [
 ];
 
 const Work = () => {
+  const { fetchWorks } = useContext(WorkContext);
+  useEffect(() => {
+    fetchWorks();
+  });
+
   return (
     <div className="Work section" id="work">
       <div className="grid">
