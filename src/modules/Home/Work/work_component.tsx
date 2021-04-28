@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import Tag from "@/src/component/Tag/tag_component";
 import "./work_component.scss";
 import BigCard from "@/src/component/BigCard/bigCard_component";
@@ -43,10 +43,12 @@ const workItems = [
 ];
 
 const Work = () => {
-  const { fetchWorks } = useContext(WorkContext);
+  const { value, state, dispatch } = useContext(WorkContext);
+
   useEffect(() => {
-    fetchWorks();
-  });
+    dispatch({ type: "increment" });
+    setTimeout(() => console.log("state work", state), 4000);
+  }, []);
 
   return (
     <div className="Work section" id="work">
@@ -77,5 +79,7 @@ const Work = () => {
     </div>
   );
 };
+
+Work.contextType = WorkContext;
 
 export default Work;
