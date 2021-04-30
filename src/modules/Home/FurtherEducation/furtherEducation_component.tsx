@@ -81,7 +81,11 @@ const FurtherEducationItems = [
 
 const FurtherEducation = () => {
   return (
-    <div className="FurtherEducation section">
+    <div
+      className="FurtherEducation section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
       <div className="grid">
         <div className="col-desk-12 col-mob-4">
           <h1 className="title">Further Education</h1>

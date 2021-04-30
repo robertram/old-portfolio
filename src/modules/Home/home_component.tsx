@@ -29,6 +29,7 @@ const Home: React.FunctionComponent = () => {
         <FurtherEducation />
         {/* My Work */}
         <Work />
+        <Footer />
       </div>
 
       {/* <Footer />*/}

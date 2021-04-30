@@ -31,7 +31,11 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="Skills section">
+    <div
+      className="Skills section"
+      data-aos="fade-up-left"
+      data-aos-duration="1500"
+    >
       <div className="grid">
         <div className="col-desk-12 col-mob-4">
           <h1 className="title">Skills</h1>

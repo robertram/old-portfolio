@@ -13,12 +13,12 @@ const Hero = () => {
     <div className="Hero" id="hero">
       <div className="Hero__wrapper grid">
         <div className="col-desk-6 col-mob-4">
-          <div className="Hero__animation">
+          <div className="Hero__animation" data-aos="fade-right">
             <Lottie animationData={animationMap} loop={true} autoPlay={false} />
           </div>
         </div>
         <div className="col-desk-6 col-mob-4">
-          <div className="Hero__text">
+          <div className="Hero__text" data-aos="fade-left">
             <h1 className="title">Im Robert Ramirez</h1>
             <h1 className="subtitle">Web Developer</h1>
             <Button

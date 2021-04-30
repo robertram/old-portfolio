@@ -7,7 +7,12 @@ import Button from "@/src/component/Button/button_component";
 const Description = () => {
   const { t } = useTranslation(NAMESPACE_KEY);
   return (
-    <div className="Description section " id="about">
+    <div
+      className="Description section "
+      id="about"
+      data-aos="fade-up-right"
+      data-aos-duration="1500"
+    >
       <div className="grid">
         <div className="col-desk-12 col-mob-4">
           <h1 className="title">{t("about_title")}</h1>

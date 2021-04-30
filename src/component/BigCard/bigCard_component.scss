@@ -3,6 +3,7 @@
 .BigCard {
   width: 100%;
   margin-bottom: 30px;
+
   &__imageContainer {
     min-height: 170px;
     max-width: 500px;
@@ -23,13 +24,15 @@
       border-radius: 20px;
     }
   }
+  &__linkContainer {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
   &__link {
     text-decoration: none;
     color: $black;
     cursor: pointer;
-    &:hover {
-      opacity: 0.6;
-    }
   }
   &__description {
     p {
