@@ -3,6 +3,7 @@ import "../i18n/i18n";
 import "../src/styles/global.scss";
 import Head from "next/head";
 import AOS from "aos";
+import { WorkProvider } from "../contexts/WorkContext";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -10,7 +11,7 @@ export default function App({ Component, pageProps }) {
     AOS.refresh();
   }, []);
   return (
-    <div>
+    <WorkProvider>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -37,6 +38,6 @@ export default function App({ Component, pageProps }) {
         ></meta>
       </Head>
       <Component {...pageProps} />
-    </div>
+    </WorkProvider>
   );
 }

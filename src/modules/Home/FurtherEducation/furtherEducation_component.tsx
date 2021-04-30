@@ -87,7 +87,10 @@ const FurtherEducation = () => {
           <h1 className="title">Further Education</h1>
           <div className="FurtherEducation__cardsContainer">
             {FurtherEducationItems.map((item, index) => (
-              <div key={index}>
+              <div
+                key={index}
+                className="FurtherEducation__cardTextImageContainer"
+              >
                 <CardTextImage
                   image={item.image}
                   title={item.title}

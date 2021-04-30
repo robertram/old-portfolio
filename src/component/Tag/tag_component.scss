@@ -1,6 +1,7 @@
 @import "src/styles/main_styles.scss";
 
 .Tag {
+  margin-bottom: 5px;
   &__text {
     border: solid $black 2px;
     border-radius: 20px;

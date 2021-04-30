@@ -1,4 +1,3 @@
-import About from "../src/modules/About/about_component";
 import Head from "next/head";
 import { useTranslation } from "react-i18next";
 import { NAMESPACE_KEY } from "../src/i18n/i18n";
@@ -23,7 +22,6 @@ export default function HomePage() {
         <meta property="og:description" content={t("meta_description")}></meta>
         <meta property="og:image" content={META_IMG}></meta>
       </Head>
-      <About />
     </div>
   );
 }

@@ -1,0 +1,42 @@
+@import "src/styles/main_styles.scss";
+
+.BigCard {
+  width: 100%;
+  margin-bottom: 30px;
+  &__imageContainer {
+    min-height: 170px;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    @include sm {
+      //max-width: 400px;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__description {
+    p {
+      margin: 0;
+    }
+  }
+  &__tagsContainer {
+    margin-top: 10px;
+  }
+}

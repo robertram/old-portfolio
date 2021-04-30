@@ -21,8 +21,8 @@
   "home_contact_title": "Contact",
 
   
-  "hero_button_text": "Read about me",
-  "hero_button_link": "#about",
+  "hero_about_button_text": "Read about me",
+  "hero_work_button_text": "See my Work",
   
 
   "about_title": "About Me",

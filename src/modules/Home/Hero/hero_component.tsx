@@ -22,7 +22,7 @@ const Hero = () => {
             <h1 className="title">Im Robert Ramirez</h1>
             <h1 className="subtitle">Web Developer</h1>
             <Button
-              text={t("hero_button_text")}
+              text={t("hero_about_button_text")}
               className="SecondaryButtonLight"
               size="medium"
               action={() => {
@@ -32,6 +32,16 @@ const Hero = () => {
                 });
               }}
               notBlank
+            />
+            <Button
+              text={t("hero_work_button_text")}
+              className="Button"
+              action={() => {
+                scroller.scrollTo("work", {
+                  smooth: "true",
+                  offset: -100,
+                });
+              }}
             />
           </div>
         </div>
