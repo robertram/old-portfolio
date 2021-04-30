@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { createClient } from "contentful";
 
 const WorkContext = createContext(null);
@@ -40,12 +40,7 @@ function countReducer(state, action) {
   }
 }
 
-function WorkProvider({ children }) {
-  /*const [state, dispatch] = useReducer(countReducer, {
-    count: 0,
-    work: null,
-  });*/
-
+const WorkProvider = ({ children }) => {
   const [state, setState] = useState({
     count: 0,
     work: null,
@@ -61,6 +56,6 @@ function WorkProvider({ children }) {
   const value = { state };
 
   return <WorkContext.Provider value={value}>{children}</WorkContext.Provider>;
-}
+};
 
 export { WorkProvider, WorkContext };
