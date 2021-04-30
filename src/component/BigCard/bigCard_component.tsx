@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { NAMESPACE_KEY } from "@/src/i18n/i18n";
+import React from "react";
 import "./bigCard_component.scss";
-import Link from "next/link";
 import Tag from "../Tag/tag_component";
 
 type TCard = {
@@ -15,8 +12,6 @@ type TCard = {
 };
 
 const BigCard = ({ image, title, description, date, link, tags }: TCard) => {
-  const { t } = useTranslation(NAMESPACE_KEY);
-
   return (
     <div className="BigCard ">
       <a href={link} target="_blank" className="BigCard__link">

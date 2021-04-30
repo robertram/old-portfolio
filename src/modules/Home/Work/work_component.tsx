@@ -1,19 +1,10 @@
-import React, { useContext, useEffect, useReducer, useState } from "react";
-import Tag from "@/src/component/Tag/tag_component";
+import React, { useContext } from "react";
 import "./work_component.scss";
 import BigCard from "@/src/component/BigCard/bigCard_component";
 import { WorkContext } from "../../../../contexts/WorkContext";
 
 const Work = () => {
-  const { value, state, dispatch } = useContext(WorkContext);
-  const [work, setWork] = useState(state.work);
-
-  useEffect(() => {
-    //dispatch({ type: "increment" });
-    console.log("hola works", state);
-    console.log("hola ", JSON.stringify(state.work, null, 4));
-    console.log("work state", work);
-  }, []);
+  const { state } = useContext(WorkContext);
 
   return (
     <div className="Work section" id="work">
