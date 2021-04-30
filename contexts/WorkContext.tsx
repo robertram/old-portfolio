@@ -1,40 +1,37 @@
-import React, { createContext, useReducer, useEffect } from "react";
+import React, { createContext, useReducer, useEffect, useState } from "react";
+import { createClient } from "contentful";
 
 const WorkContext = createContext(null);
 
-const printError = (err: unknown) => {
-  // eslint-disable-next-line no-console
-  console.error(err);
-};
-import { createClient } from "contentful";
+const client = createClient({
+  space: "k7xn0y4bai9d",
+  accessToken: "ilgns93Xm3N1yxKgpIpZkn1iTi4j86L3n5lWKGfHW4M",
+});
 
 const getWorks = async () => {
-  const client = createClient({
-    space: "k7xn0y4bai9d",
-    accessToken: "ilgns93Xm3N1yxKgpIpZkn1iTi4j86L3n5lWKGfHW4M",
-  });
-
   const res = await client.getEntries({ content_type: "work" });
+  console.log("client", client.getSpace());
 
   return {
-    props: {
-      work: res.items,
-    },
-    revalidate: 1,
+    work: res.items,
   };
 };
 
 function countReducer(state, action) {
   switch (action.type) {
     case "increment": {
-      return {
-        ...state,
-        state: getWorks(),
-      };
+      console.log("action", action.type);
+      const a = getWorks();
+      a.then((response) => {
+        console.log("response", response.work);
+        if (response) {
+          return { count: state.count + 1, works: response.work };
+        }
+      });
     }
 
     case "decrement": {
-      return { state: "Hola mundo" };
+      return { count: state.count - 5 };
     }
 
     default: {
@@ -44,19 +41,26 @@ function countReducer(state, action) {
 }
 
 function WorkProvider({ children }) {
+  /*const [state, dispatch] = useReducer(countReducer, {
+    count: 0,
+    work: null,
+  });*/
+
+  const [state, setState] = useState({
+    count: 0,
+    work: null,
+  });
+
   useEffect(() => {
-    getWorks().then((resolve) => {
-      dispatch({ type: "increment" });
+    client.getEntries({ content_type: "work" }).then((res) => {
+      console.log("res", res.items);
+      setState({ ...state, work: res.items });
     });
   }, []);
 
-  const [state, dispatch] = useReducer(countReducer, {
-    state: "Initial State",
-  });
-
-  const value = { state, dispatch };
+  const value = { state };
 
   return <WorkContext.Provider value={value}>{children}</WorkContext.Provider>;
 }
 
-export { WorkProvider, WorkContext, getWorks };
+export { WorkProvider, WorkContext };

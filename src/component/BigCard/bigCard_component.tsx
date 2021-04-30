@@ -18,7 +18,7 @@ const BigCard = ({ image, title, description, date, link, tags }: TCard) => {
   const { t } = useTranslation(NAMESPACE_KEY);
 
   return (
-    <div className="BigCard">
+    <div className="BigCard ">
       <a href={link} target="_blank" className="BigCard__link">
         <div className="BigCard__imageContainer">
           <img src={image} alt="BigCard Image" className="BigCard__image" />
@@ -32,7 +32,7 @@ const BigCard = ({ image, title, description, date, link, tags }: TCard) => {
       <div className="BigCard__tagsContainer grid">
         {tags?.map((item, index) => (
           <div key={index}>
-            <Tag text={item.name} />
+            <Tag text={item} />
           </div>
         ))}
       </div>

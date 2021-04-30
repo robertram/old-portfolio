@@ -3,8 +3,12 @@
 .BigCard {
   width: 100%;
   margin-bottom: 30px;
-  &_imageContainer {
-    max-width: 300px;
+  &__imageContainer {
+    min-height: 170px;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
   }
   &__image {
     width: 100%;
@@ -12,6 +16,7 @@
     object-fit: cover;
     border-radius: 20px;
     @include sm {
+      //max-width: 400px;
       width: 50%;
       height: 100%;
       object-fit: cover;
