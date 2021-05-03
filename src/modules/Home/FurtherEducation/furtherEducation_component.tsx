@@ -1,10 +1,11 @@
-import CardTextImage from "@/src/component/CardTextImage/cardTextImage_component";
-import React from "react";
+import React, { useContext } from "react";
 import "./furtherEducation_component.scss";
+import CardTextImage from "@/src/component/CardTextImage/cardTextImage_component";
 import Capacitate from "./ModalChildrens/Capacitate";
 import DesignThinking from "./ModalChildrens/DesignThinking";
 import IBMExperience from "./ModalChildrens/IBMExperience";
 import Codecademy from "./ModalChildrens/Codecademy";
+import { WorkContext } from "../../../../contexts/WorkContext";
 
 const FurtherEducationItems = [
   {
@@ -80,12 +81,33 @@ const FurtherEducationItems = [
 ];
 
 const FurtherEducation = () => {
+  const { state } = useContext(WorkContext);
   return (
     <div className="FurtherEducation section">
       <div className="grid">
         <div className="col-desk-12 col-mob-4">
           <h1 className="title">Further Education</h1>
           <div className="FurtherEducation__cardsContainer">
+            {state &&
+              state.education?.map((item, index) => (
+                <div
+                  key={index}
+                  className="FurtherEducation__cardTextImageContainer"
+                >
+                  <CardTextImage
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                    date={item.date}
+                    url={item.url}
+                    children={item.children}
+                  />
+                </div>
+              ))}
+
+            <br />
+            <br />
+            <br />
             {FurtherEducationItems.map((item, index) => (
               <div
                 key={index}
