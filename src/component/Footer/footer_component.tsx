@@ -27,12 +27,7 @@ const footerLinks = [
 const Footer = () => {
   const { t } = useTranslation(NAMESPACE_KEY);
   return (
-    <div
-      className="Footer section"
-      id="contact"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
+    <div className="Footer section" id="contact">
       <div className="grid">
         <div className="col-desk-12 col-mob-4">
           <div className="Footer__contact">

@@ -3,11 +3,7 @@ import "./education_component.scss";
 
 const Education = () => {
   return (
-    <div
-      className="Education section"
-      data-aos="fade-up-right"
-      data-aos-duration="1500"
-    >
+    <div className="Education section">
       <div className="grid">
         <div className="col-desk-12 col-mob-4">
           <h1 className="title">Academic Education</h1>

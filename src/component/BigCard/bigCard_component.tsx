@@ -15,13 +15,7 @@ const BigCard = ({ image, title, description, date, link, tags }: TCard) => {
   return (
     <div className="BigCard ">
       <div className="BigCard__linkContainer">
-        <a
-          href={link}
-          target="_blank"
-          className="BigCard__link"
-          data-aos="zoom-out-up"
-          data-aos-duration="1500"
-        >
+        <a href={link} target="_blank" className="BigCard__link">
           <div className="BigCard__imageContainer">
             <img src={image} alt="BigCard Image" className="BigCard__image" />
           </div>
