@@ -88,18 +88,20 @@ const FurtherEducation = () => {
         <div className="col-desk-12 col-mob-4">
           <h1 className="title">Further Education</h1>
           <div className="FurtherEducation__cardsContainer">
+            {console.log(state)}
             {state &&
               state.education?.map((item, index) => (
                 <div
                   key={index}
                   className="FurtherEducation__cardTextImageContainer"
                 >
+                  {console.log("item", item)}
                   <CardTextImage
-                    image={item.image}
-                    title={item.title}
+                    image={item.fields.title}
+                    title={item.fields.title}
                     description={item.description}
                     date={item.date}
-                    url={item.url}
+                    url={`/education/${item.fields.slug}`}
                     children={item.children}
                   />
                 </div>

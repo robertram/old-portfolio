@@ -25,34 +25,42 @@ const CardTextImage = ({
 
   return (
     <div>
-      <Modal
+      {/*<Modal
         title={title}
         open={openModal}
         setOpen={() => setOpenModal(false)}
         children={children}
-      />
-      <div
+      />*/}
+      {/*<div
         className="CardTextImage"
         onClick={() => {
           setOpenModal(!openModal);
         }}
-      >
-        <div className="CardTextImage__infoContainer">
-          <div className="CardTextImage__imageContainer">
-            <img src={image} alt="Card Image" />
+      >*/}
+      <Link href={url}>
+        <div className="CardTextImage">
+          <div className="CardTextImage__infoContainer">
+            <div className="CardTextImage__imageContainer">
+              <img src={image} alt="Card Image" />
+            </div>
+            <div className="CardTextImage__textContainer">
+              <p className="subtitle CardTextImage__title">{title}</p>
+              <p className="body-regular">{description}</p>
+              <p className="body-regular">{date}</p>
+            </div>
           </div>
-          <div className="CardTextImage__textContainer">
-            <p className="subtitle CardTextImage__title">{title}</p>
-            <p className="body-regular">{description}</p>
-            <p className="body-regular">{date}</p>
+          <div className="CardTextImage__arrowContainer">
+            <RightArrow />
           </div>
         </div>
-        <div className="CardTextImage__arrowContainer">
-          <RightArrow />
-        </div>
-      </div>
+      </Link>
     </div>
   );
 };
+
+CardTextImage.defaultProps = {
+  url: "",
+  title: "",
+} as Partial<TProps>;
 
 export default CardTextImage;
