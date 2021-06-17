@@ -81,7 +81,7 @@ const Header = ({}) => {
       <div className="header-landing__wrapper grid">
         <a title="Home" href="/" className="header-landing__logoLink">
           <div className="header-landing__logo">
-            <img src="assets/shared/logo.png" alt="Robert Ramirez Logo" />
+            <img src="/assets/shared/logo.png" alt="Robert Ramirez Logo" />
             &nbsp;&nbsp;
             <span className="header-landing__logoText body-bold">RRM</span>
           </div>

@@ -10,11 +10,10 @@
   "header_close_text": "CLOSE",
   "header_menu_text": "MENU",
 
-  "footer_about_text": "About ",
-  "footer_investors_text": "New business",
-  "footer_work_with_us_text": "Work with us",
-  "footer_follow_text": "Follow us on:",
-  "footer_copyright_text": "Robert © ",
+  "footer_copyright_text": "© 2021, Built with NextJS, by Robert Ramirez",
+  "footer_contact_title":"Contact Me",
+  "footer_contact_description":"Feel free to contact me on ",
+  "footer_contact_description2":" or by my social media.",
 
   "home_about_title": "About Me",
   "home_work_title": "My Work",

@@ -13,6 +13,7 @@ import "./home_styles.scss";
 import animationMap from "@/assets/shared/computer.json";
 import Hero from "./Hero/hero_component";
 import Work from "./Work/work_component";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Home: React.FunctionComponent = () => {
   const { t } = useTranslation(NAMESPACE_KEY);
@@ -21,14 +22,18 @@ const Home: React.FunctionComponent = () => {
       <Header />
 
       <div className="Home__body">
-        <Hero />
-        {/* About Me */}
-        <Description />
+        <ScrollAnimation animateIn="fadeIn" duration={5}>
+          <Hero />
+        </ScrollAnimation>
+        <div className="wow bounceIn">
+          <Description />
+        </div>
         <Skills />
         <Education />
         <FurtherEducation />
         {/* My Work */}
         <Work />
+        <Footer />
       </div>
 
       {/* <Footer />*/}

@@ -2,14 +2,9 @@ import { useEffect } from "react";
 import "../i18n/i18n";
 import "../src/styles/global.scss";
 import Head from "next/head";
-import AOS from "aos";
 import { WorkProvider } from "../contexts/WorkContext";
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
   return (
     <WorkProvider>
       <Head>

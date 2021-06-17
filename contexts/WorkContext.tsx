@@ -44,11 +44,15 @@ const WorkProvider = ({ children }) => {
   const [state, setState] = useState({
     count: 0,
     work: null,
+    education: null,
   });
 
   useEffect(() => {
-    client.getEntries({ content_type: "work" }).then((res) => {
+    client.getEntries({ content_type: "education" }).then((res) => {
       console.log("res", res.items);
+      setState({ ...state, education: res.items });
+    });
+    client.getEntries({ content_type: "work" }).then((res) => {
       setState({ ...state, work: res.items });
     });
   }, []);
